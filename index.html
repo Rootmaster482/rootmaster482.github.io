@@ -376,9 +376,11 @@
         }
 
         .metric-value {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 800;
             font-family: 'JetBrains Mono', monospace;
+            word-wrap: break-word;
+            line-height: 1.4;
         }
 
         .metric-value.positive {
@@ -387,6 +389,14 @@
 
         .metric-value.negative {
             color: var(--danger);
+        }
+        
+        .metric-breakdown {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            margin-top: 5px;
+            font-family: 'Work Sans', sans-serif;
         }
 
         /* Form Grid */
@@ -971,10 +981,21 @@
             financiero.dolares = parseFloat(document.getElementById('dolares').value) || 0;
             financiero.cotizacion = parseFloat(document.getElementById('cotizacion').value) || 0;
             
-            const entradaTotal = financiero.entradaPlata + (financiero.dolares * financiero.cotizacion);
+            // Calcular entrada total: pesos + (dólares × cotización)
+            const dolaresEnPesos = financiero.dolares * financiero.cotizacion;
+            const entradaTotal = financiero.entradaPlata + dolaresEnPesos;
             const saldo = entradaTotal - totals.total - totalMateriales;
 
-            document.getElementById('dashEntrada').textContent = '$' + entradaTotal.toLocaleString('es-AR');
+            // Mostrar entrada total con desglose si hay dólares
+            let entradaHTML = '$' + entradaTotal.toLocaleString('es-AR');
+            if (financiero.dolares > 0 && financiero.cotizacion > 0) {
+                entradaHTML += '<div class="metric-breakdown">ARS: $' + financiero.entradaPlata.toLocaleString('es-AR') + 
+                               ' + USD: $' + financiero.dolares.toLocaleString('es-AR') + 
+                               ' × ' + financiero.cotizacion.toLocaleString('es-AR') + 
+                               ' = $' + dolaresEnPesos.toLocaleString('es-AR') + '</div>';
+            }
+            
+            document.getElementById('dashEntrada').innerHTML = entradaHTML;
             document.getElementById('dashManoObra').textContent = '$' + totals.total.toLocaleString('es-AR');
             document.getElementById('dashMateriales').textContent = '$' + totalMateriales.toLocaleString('es-AR');
             
