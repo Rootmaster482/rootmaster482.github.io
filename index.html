@@ -62,7 +62,6 @@
             z-index: 1;
         }
 
-        /* Header */
         header {
             background: linear-gradient(135deg, #ffffff 0%, rgba(248, 250, 252, 0.9) 100%);
             border-radius: 16px;
@@ -130,7 +129,6 @@
             50% { opacity: 0.6; transform: scale(1.2); }
         }
 
-        /* Obra Selector */
         .obra-selector {
             background: white;
             border-radius: 12px;
@@ -180,45 +178,202 @@
             flex-wrap: wrap;
         }
 
-        /* Tab Navigation */
+        .obra-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid var(--border);
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .info-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .info-value {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .week-selector {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .week-selector-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .week-navigation {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .week-info {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .week-info h3 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .week-dates {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--secondary), #1d4ed8);
+            color: white;
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, var(--success), #059669);
+            color: white;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, var(--warning), #d97706);
+            color: white;
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-warning:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, var(--danger), #dc2626);
+            color: white;
+            box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+        }
+
+        .btn-danger:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+        }
+
+        .btn-outline {
+            background: white;
+            color: var(--text-primary);
+            border: 2px solid var(--border);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            background: rgba(255, 107, 53, 0.05);
+        }
+
+        .btn-icon {
+            padding: 8px;
+            min-width: 36px;
+            height: 36px;
+            justify-content: center;
+        }
+
+        .btn-sm {
+            padding: 6px 12px;
+            font-size: 0.85rem;
+        }
+
         .tabs {
             display: flex;
             gap: 8px;
-            margin-bottom: 20px;
-            background: #ffffff;
+            background: white;
             padding: 8px;
             border-radius: 12px;
+            margin-bottom: 20px;
             border: 2px solid var(--border);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
             overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
+            flex-wrap: nowrap;
         }
 
         .tab {
             flex: 1;
-            min-width: 100px;
-            padding: 12px 16px;
+            min-width: 120px;
+            padding: 12px 20px;
             background: transparent;
-            border: none;
+            border: 2px solid transparent;
             border-radius: 8px;
-            font-size: 0.9rem;
             font-weight: 600;
-            color: var(--text-muted);
             cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Work Sans', sans-serif;
-            white-space: nowrap;
+            transition: all 0.3s;
+            color: var(--text-secondary);
+            position: relative;
         }
 
         .tab:hover {
-            color: var(--text-secondary);
-            background: #f1f5f9;
+            background: rgba(255, 107, 53, 0.05);
+            color: var(--primary);
         }
 
         .tab.active {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
-            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
         }
 
         .tab-content {
@@ -227,287 +382,146 @@
 
         .tab-content.active {
             display: block;
-            animation: fadeIn 0.4s ease;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Cards */
         .card {
-            background: #ffffff;
-            border-radius: 16px;
+            background: white;
+            border-radius: 12px;
             padding: 20px;
-            margin-bottom: 20px;
             border: 2px solid var(--border);
-            transition: all 0.3s ease;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
         }
 
-        .card:hover {
-            border-color: rgba(255, 107, 53, 0.4);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .card-title {
-            font-size: clamp(1.1rem, 3vw, 1.3rem);
+            font-size: 1.3rem;
             font-weight: 700;
-            margin-bottom: 20px;
+            color: var(--text-primary);
             display: flex;
             align-items: center;
             gap: 10px;
-            color: var(--text-primary);
         }
 
-        .icon {
-            font-size: 1.5rem;
+        .card-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
         }
 
-        /* Table Styles */
         .table-container {
             overflow-x: auto;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            -webkit-overflow-scrolling: touch;
+            border-radius: 8px;
+            border: 2px solid var(--border);
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.85rem;
-            min-width: 600px;
+            background: white;
         }
 
         thead {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
             position: sticky;
             top: 0;
             z-index: 10;
         }
 
-        thead th {
-            padding: 12px 8px;
+        th {
+            padding: 12px;
             text-align: left;
             font-weight: 700;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        tbody tr {
-            border-bottom: 1px solid var(--border);
-            transition: background-color 0.2s;
-        }
-
-        tbody tr:hover {
-            background-color: #f8fafc;
-        }
-
-        tbody td {
-            padding: 10px 8px;
-        }
-
-        tfoot {
-            background: #f8fafc;
-            font-weight: 700;
-            border-top: 3px solid var(--primary);
-            position: sticky;
-            bottom: 0;
-        }
-
-        tfoot td {
-            padding: 12px 8px;
-            font-size: 0.9rem;
-        }
-
-        .worker-name {
-            font-weight: 700;
             color: var(--text-primary);
-        }
-
-        .worker-badge {
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 600;
+            border-bottom: 2px solid var(--border);
+            font-size: 0.9rem;
             white-space: nowrap;
         }
 
-        .worker-badge.full {
-            background: rgba(16, 185, 129, 0.15);
-            color: var(--success);
+        td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
         }
 
-        .worker-badge.partial {
-            background: rgba(245, 158, 11, 0.15);
-            color: var(--warning);
+        td input[type="text"],
+        td input[type="number"],
+        td input[type="date"],
+        td select,
+        td textarea {
+            width: 100%;
+            padding: 6px 8px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-family: inherit;
         }
 
-        /* Input Styles */
+        td input[type="text"]:focus,
+        td input[type="number"]:focus,
+        td input[type="date"]:focus,
+        td select:focus,
+        td textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        td input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: var(--primary);
+        }
+
+        tr:hover {
+            background: rgba(255, 107, 53, 0.02);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
         input[type="text"],
         input[type="number"],
         input[type="date"],
         select,
         textarea {
             width: 100%;
-            padding: 10px 14px;
+            padding: 10px 12px;
             border: 2px solid var(--border);
             border-radius: 8px;
             font-size: 0.95rem;
-            font-family: 'Work Sans', sans-serif;
-            transition: border-color 0.2s;
+            font-family: inherit;
+            transition: all 0.3s;
             background: var(--bg-input);
         }
 
-        input:focus, select:focus, textarea:focus {
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        select:focus,
+        textarea:focus {
             outline: none;
             border-color: var(--primary);
-        }
-
-        input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
-            accent-color: var(--success);
+            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
         }
 
         textarea {
             resize: vertical;
-            min-height: 60px;
+            min-height: 80px;
         }
 
-        /* Button Styles */
-        .btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 10px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Work Sans', sans-serif;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            justify-content: center;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
-            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
-        }
-
-        .btn-secondary {
-            background: var(--danger);
-            color: white;
-        }
-
-        .btn-secondary:hover {
-            background: #dc2626;
-            transform: scale(1.05);
-        }
-
-        .btn-info {
-            background: var(--info);
-            color: white;
-        }
-
-        .btn-info:hover {
-            background: #2563eb;
-            transform: scale(1.05);
-        }
-
-        .btn-success {
-            background: var(--success);
-            color: white;
-        }
-
-        .btn-success:hover {
-            background: #059669;
-        }
-
-        .btn-export {
-            background: #16a34a;
-            color: white;
-        }
-
-        .btn-export:hover {
-            background: #15803d;
-        }
-
-        .btn-sm {
-            padding: 6px 12px;
-            font-size: 0.85rem;
-        }
-
-        /* Dashboard Metrics */
-        .metrics {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .metric-card {
-            background: white;
-            border-radius: 16px;
-            padding: 20px;
-            border: 2px solid var(--border);
-            transition: all 0.3s ease;
-        }
-
-        .metric-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .metric-label {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
-
-        .metric-value {
-            font-size: clamp(1.2rem, 4vw, 1.5rem);
-            font-weight: 800;
-            font-family: 'JetBrains Mono', monospace;
-            word-wrap: break-word;
-            line-height: 1.4;
-        }
-
-        .metric-value.positive {
-            color: var(--success);
-        }
-
-        .metric-value.negative {
-            color: var(--danger);
-        }
-
-        .metric-breakdown {
-            font-size: 0.7rem;
-            color: var(--text-muted);
-            font-weight: 400;
-            margin-top: 5px;
-            font-family: 'Work Sans', sans-serif;
-        }
-
-        /* Form Grid */
         .form-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
             margin-bottom: 20px;
         }
@@ -518,85 +532,41 @@
             gap: 6px;
         }
 
-        .form-group label {
-            font-size: 0.8rem;
+        .form-label {
             font-weight: 600;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
+            font-size: 0.9rem;
+            color: var(--text-primary);
         }
 
-        /* Progress Bar */
-        .progress-container {
-            background: #e2e8f0;
-            border-radius: 20px;
-            height: 12px;
-            overflow: hidden;
-            margin: 10px 0;
-        }
-
-        .progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, var(--success), #059669);
-            transition: width 0.6s ease;
-            border-radius: 20px;
-        }
-
-        /* Tool Badge */
-        .tool-badge {
-            display: inline-block;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-right: 5px;
-            margin-bottom: 5px;
-        }
-
-        .tool-badge.disponible {
-            background: rgba(16, 185, 129, 0.15);
-            color: var(--success);
-        }
-
-        .tool-badge.en-uso {
-            background: rgba(245, 158, 11, 0.15);
-            color: var(--warning);
-        }
-
-        .tool-badge.mantenimiento {
-            background: rgba(239, 68, 68, 0.15);
-            color: var(--danger);
-        }
-
-        /* Modal */
         .modal {
             display: none;
             position: fixed;
-            z-index: 1000;
-            left: 0;
             top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.5);
-            animation: fadeIn 0.3s;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal.active {
+            display: flex;
         }
 
         .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 30px;
-            border: none;
+            background: white;
             border-radius: 16px;
-            width: 90%;
-            max-width: 500px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            animation: slideIn 0.3s;
-        }
-
-        @keyframes slideIn {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            padding: 30px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
         }
 
         .modal-header {
@@ -604,66 +574,207 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--border);
         }
 
-        .modal-header h2 {
+        .modal-title {
             font-size: 1.5rem;
+            font-weight: 700;
             color: var(--text-primary);
         }
 
-        .close {
-            color: #aaa;
-            font-size: 28px;
-            font-weight: bold;
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
             cursor: pointer;
-            transition: color 0.3s;
+            color: var(--text-muted);
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s;
         }
 
-        .close:hover {
-            color: #000;
+        .modal-close:hover {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--danger);
         }
 
-        /* Responsive */
+        .modal-footer {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid var(--border);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, white, #f8fafc);
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid var(--border);
+            text-align: center;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            gap: 4px;
+        }
+
+        .badge-success {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+        }
+
+        .badge-warning {
+            background: rgba(245, 158, 11, 0.1);
+            color: var(--warning);
+        }
+
+        .badge-danger {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--danger);
+        }
+
+        .badge-info {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--info);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 5px;
+            justify-content: flex-start;
+        }
+
+        .btn-action {
+            padding: 6px 10px;
+            font-size: 0.85rem;
+            min-width: auto;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .file-upload-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, var(--secondary), #1d4ed8);
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+        }
+
+        .file-upload-label:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+        }
+
+        .empty-state-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .empty-state-text {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .empty-state-hint {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-card);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 10px;
             }
 
-            header {
-                padding: 15px;
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .card-actions {
+                width: 100%;
+            }
+
+            .card-actions button {
+                flex: 1;
             }
 
             .tabs {
-                gap: 5px;
-                padding: 6px;
+                flex-wrap: wrap;
             }
 
             .tab {
-                padding: 10px 12px;
-                font-size: 0.85rem;
-                min-width: 80px;
-            }
-
-            .card {
-                padding: 15px;
-            }
-
-            .card-title {
-                flex-direction: column;
-                align-items: flex-start !important;
-                gap: 10px;
-            }
-
-            .card-title > div {
-                width: 100%;
-            }
-
-            .card-title .btn-export {
-                width: 100%;
-            }
-
-            .metrics {
-                grid-template-columns: 1fr;
+                flex: 1 1 auto;
+                min-width: 100px;
             }
 
             .form-grid {
@@ -671,22 +782,11 @@
             }
 
             table {
-                font-size: 0.75rem;
+                font-size: 0.85rem;
             }
 
-            thead th, tbody td, tfoot td {
-                padding: 8px 6px;
-            }
-
-            .btn {
-                padding: 10px 16px;
-                font-size: 0.9rem;
-            }
-
-            .modal-content {
-                width: 95%;
-                padding: 20px;
-                margin: 10% auto;
+            th, td {
+                padding: 8px;
             }
 
             .obra-selector-header {
@@ -697,151 +797,66 @@
             .obra-select {
                 width: 100%;
             }
-
-            .obra-actions {
-                width: 100%;
-            }
-
-            .obra-actions .btn {
-                flex: 1;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.3rem;
-            }
-
-            .subtitle {
-                font-size: 0.85rem;
-            }
-
-            .card-title {
-                font-size: 1rem;
-            }
-
-            table {
-                font-size: 0.7rem;
-                min-width: 500px;
-            }
-
-            input[type="text"],
-            input[type="number"],
-            input[type="date"],
-            select {
-                font-size: 0.9rem;
-                padding: 8px 10px;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🏗️ Control de Obra Multi-Proyecto</h1>
+            <h1>🏗️ Control de Obra Interactivo</h1>
             <div class="subtitle">
-                <span id="currentDate"></span>
+                <span>Gestión eficiente de múltiples obras</span>
                 <div class="live-indicator">
                     <div class="live-dot"></div>
-                    EN VIVO
+                    Sistema Activo
                 </div>
             </div>
         </header>
 
-        <!-- Selector de Obras -->
         <div class="obra-selector">
             <div class="obra-selector-header">
-                <h2>🏢 Obra Actual:</h2>
+                <h2>📋 Obra Actual</h2>
                 <select id="obraSelect" class="obra-select" onchange="cambiarObra()">
-                    <option value="0">Obra Principal</option>
+                    <option value="">Selecciona una obra...</option>
                 </select>
                 <div class="obra-actions">
-                    <button class="btn btn-success btn-sm" onclick="mostrarModalNuevaObra()">➕ Nueva Obra</button>
-                    <button class="btn btn-secondary btn-sm" onclick="eliminarObraActual()">🗑️ Eliminar Obra</button>
+                    <button class="btn-success" onclick="abrirModalNuevaObra()">➕ Nueva Obra</button>
+                    <button class="btn-warning" onclick="editarObraActual()">✏️ Editar</button>
+                    <button class="btn-danger" onclick="eliminarObraActual()">🗑️ Eliminar</button>
                 </div>
+            </div>
+            <div class="obra-info" id="obraInfo"></div>
+        </div>
+
+        <div class="week-selector">
+            <div class="week-selector-header">
+                <button class="btn-outline" onclick="cambiarSemana(-1)">⬅️ Anterior</button>
+                <div class="week-info">
+                    <h3 id="weekTitle">Semana 1</h3>
+                    <div class="week-dates" id="weekDates">Selecciona una obra</div>
+                </div>
+                <button class="btn-outline" onclick="cambiarSemana(1)">Siguiente ➡️</button>
             </div>
         </div>
 
-        <!-- Tabs -->
         <div class="tabs">
-            <button class="tab active" onclick="switchTab('dashboard')">📊 Dashboard</button>
-            <button class="tab" onclick="switchTab('jornales')">👷 Jornales</button>
-            <button class="tab" onclick="switchTab('materiales')">📦 Materiales</button>
-            <button class="tab" onclick="switchTab('herramientas')">🔧 Herramientas</button>
-            <button class="tab" onclick="switchTab('financiero')">💰 Financiero</button>
+            <button class="tab active" onclick="changeTab('jornales')">👷 Jornales</button>
+            <button class="tab" onclick="changeTab('materiales')">🧱 Materiales</button>
+            <button class="tab" onclick="changeTab('herramientas')">🔧 Herramientas</button>
+            <button class="tab" onclick="changeTab('resumen')">📊 Resumen</button>
         </div>
 
-        <!-- Dashboard Tab -->
-        <div id="dashboard" class="tab-content active">
-            <div style="display: flex; justify-content: flex-end; margin-bottom: 15px;">
-                <button class="btn btn-export btn-sm" onclick="exportarDashboard()">
-                    📊 Exportar Dashboard
-                </button>
-            </div>
-            
-            <div class="metrics">
-                <div class="metric-card">
-                    <div class="metric-label">💵 Entrada Total</div>
-                    <div class="metric-value" id="dashEntrada">$0</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-label">👷 Mano de Obra</div>
-                    <div class="metric-value" id="dashManoObra">$0</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-label">📦 Materiales</div>
-                    <div class="metric-value" id="dashMateriales">$0</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-label">💰 Saldo</div>
-                    <div class="metric-value positive" id="dashSaldo">$0</div>
-                </div>
-            </div>
-
+        <div id="jornales-tab" class="tab-content active">
             <div class="card">
-                <div class="card-title">
-                    <span class="icon">📈</span>
-                    Asistencia Semanal
-                </div>
-                <div class="progress-container">
-                    <div class="progress-bar" id="assistanceProgress" style="width: 0%;"></div>
-                </div>
-                <p id="assistanceLabel" style="margin-top: 10px; font-weight: 600; color: var(--text-secondary);">0% de asistencia</p>
-            </div>
-
-            <div class="card">
-                <div class="card-title">
-                    <span class="icon">👥</span>
-                    Estado de Trabajadores
-                </div>
-                <div id="workerStats"></div>
-            </div>
-
-            <div class="card">
-                <div class="card-title">
-                    <span class="icon">🔧</span>
-                    Herramientas Disponibles
-                </div>
-                <div id="toolsStats"></div>
-            </div>
-        </div>
-
-        <!-- Jornales Tab -->
-        <div id="jornales" class="tab-content">
-            <div class="card">
-                <div class="card-title" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <span class="icon">👷</span>
-                        Control de Jornales
-                    </div>
-                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <label class="btn btn-info btn-sm" style="margin: 0; cursor: pointer;">
-                            📤 Importar Excel
-                            <input type="file" id="importJornales" accept=".xlsx,.xls" style="display: none;" onchange="importarJornales(event)">
+                <div class="card-header">
+                    <h2 class="card-title">👷 Control de Jornales</h2>
+                    <div class="card-actions">
+                        <button class="btn-primary" onclick="agregarJornal()">➕ Agregar</button>
+                        <label class="file-upload-label">
+                            📥 Importar Excel
+                            <input type="file" id="importJornalesFile" accept=".xlsx,.xls" onchange="handleImportJornales(this.files[0])">
                         </label>
-                        <button class="btn btn-export btn-sm" onclick="exportarJornales()">
-                            📥 Exportar Excel
-                        </button>
+                        <button class="btn-warning" onclick="descargarPlantillaJornales()">📄 Plantilla</button>
                     </div>
                 </div>
                 <div class="table-container">
@@ -850,98 +865,40 @@
                             <tr>
                                 <th>Trabajador</th>
                                 <th>Jornal/Día</th>
-                                <th>L</th>
-                                <th>M</th>
-                                <th>M</th>
-                                <th>J</th>
-                                <th>V</th>
+                                <th>Lun</th>
+                                <th>Mar</th>
+                                <th>Mié</th>
+                                <th>Jue</th>
+                                <th>Vie</th>
                                 <th>Días</th>
                                 <th>Total Jornal</th>
                                 <th>Premio/Día</th>
                                 <th>Total Premio</th>
                                 <th>Asist/Día</th>
                                 <th>Total Asist</th>
-                                <th>A Pagar</th>
-                                <th>Acción</th>
+                                <th>Préstamo</th>
+                                <th>Devuelve</th>
+                                <th>A PAGAR</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
-                        <tbody id="jornalesBody"></tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="8">TOTAL SEMANAL</td>
-                                <td id="totalJornal">$0</td>
-                                <td></td>
-                                <td id="totalPremio">$0</td>
-                                <td></td>
-                                <td id="totalAsistencia">$0</td>
-                                <td id="totalPagar">$0</td>
-                                <td></td>
-                            </tr>
-                        </tfoot>
+                        <tbody id="jornalesTable"></tbody>
                     </table>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="card-title">
-                    <span class="icon">➕</span>
-                    Agregar Trabajador
-                </div>
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label>Nombre</label>
-                        <input type="text" id="newWorkerName" placeholder="Ej: Juan Pérez">
-                    </div>
-                    <div class="form-group">
-                        <label>Jornal Diario</label>
-                        <input type="number" id="newWorkerJornal" placeholder="40000">
-                    </div>
-                    <div class="form-group">
-                        <label>Premio por Día</label>
-                        <input type="number" id="newWorkerPremio" placeholder="4000" value="0">
-                    </div>
-                    <div class="form-group">
-                        <label>Asistencia por Día</label>
-                        <input type="number" id="newWorkerAsistencia" placeholder="1000" value="0">
-                    </div>
-                </div>
-                <button class="btn btn-primary" onclick="addWorker()">
-                    <span>➕</span>
-                    Agregar Trabajador
-                </button>
-            </div>
-
-            <div class="card" style="background: #f0f9ff; border-color: #3b82f6;">
-                <div class="card-title" style="color: #1e40af;">
-                    <span class="icon">💡</span>
-                    Ayuda para Importar
-                </div>
-                <p style="margin-bottom: 15px; color: #1e40af;">
-                    Para importar trabajadores desde Excel, tu archivo debe tener estas columnas:
-                    <strong>Trabajador, Jornal/Día, Lun, Mar, Mié, Jue, Vie, Premio/Día, Asist/Día</strong>
-                </p>
-                <button class="btn btn-info btn-sm" onclick="descargarPlantillaJornales()">
-                    📄 Descargar Plantilla de Ejemplo
-                </button>
-            </div>
         </div>
 
-        <!-- Materiales Tab -->
-        <div id="materiales" class="tab-content">
+        <div id="materiales-tab" class="tab-content">
             <div class="card">
-                <div class="card-title" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <span class="icon">📦</span>
-                        Control de Materiales y Gastos
-                    </div>
-                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <label class="btn btn-info btn-sm" style="margin: 0; cursor: pointer;">
-                            📤 Importar Excel
-                            <input type="file" id="importMateriales" accept=".xlsx,.xls" style="display: none;" onchange="importarMateriales(event)">
+                <div class="card-header">
+                    <h2 class="card-title">🧱 Control de Materiales</h2>
+                    <div class="card-actions">
+                        <button class="btn-primary" onclick="agregarMaterial()">➕ Agregar</button>
+                        <label class="file-upload-label">
+                            📥 Importar Excel
+                            <input type="file" id="importMaterialesFile" accept=".xlsx,.xls" onchange="handleImportMateriales(this.files[0])">
                         </label>
-                        <button class="btn btn-export btn-sm" onclick="exportarMateriales()">
-                            📥 Exportar Excel
-                        </button>
+                        <button class="btn-warning" onclick="descargarPlantillaMateriales()">📄 Plantilla</button>
                     </div>
                 </div>
                 <div class="table-container">
@@ -953,85 +910,26 @@
                                 <th>Descripción</th>
                                 <th>Monto</th>
                                 <th>Responsable</th>
-                                <th>Acción</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
-                        <tbody id="materialesBody"></tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="3">TOTAL MATERIALES</td>
-                                <td id="totalMateriales">$0</td>
-                                <td colspan="2"></td>
-                            </tr>
-                        </tfoot>
+                        <tbody id="materialesTable"></tbody>
                     </table>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="card-title">
-                    <span class="icon">➕</span>
-                    Agregar Gasto
-                </div>
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label>Fecha</label>
-                        <input type="date" id="newMaterialFecha">
-                    </div>
-                    <div class="form-group">
-                        <label>Proveedor</label>
-                        <input type="text" id="newMaterialProveedor" placeholder="Ej: Ferretería Central">
-                    </div>
-                    <div class="form-group">
-                        <label>Descripción</label>
-                        <input type="text" id="newMaterialDesc" placeholder="Ej: Cemento x 10 bolsas">
-                    </div>
-                    <div class="form-group">
-                        <label>Monto</label>
-                        <input type="number" id="newMaterialMonto" placeholder="5000">
-                    </div>
-                    <div class="form-group">
-                        <label>Responsable</label>
-                        <input type="text" id="newMaterialResp" placeholder="Ej: Juan">
-                    </div>
-                </div>
-                <button class="btn btn-primary" onclick="addMaterial()">
-                    <span>➕</span>
-                    Agregar Gasto
-                </button>
-            </div>
-
-            <div class="card" style="background: #f0f9ff; border-color: #3b82f6;">
-                <div class="card-title" style="color: #1e40af;">
-                    <span class="icon">💡</span>
-                    Ayuda para Importar
-                </div>
-                <p style="margin-bottom: 15px; color: #1e40af;">
-                    Para importar gastos desde Excel, tu archivo debe tener estas columnas:
-                    <strong>Fecha, Proveedor, Descripción, Monto, Responsable</strong>
-                </p>
-                <button class="btn btn-info btn-sm" onclick="descargarPlantillaMateriales()">
-                    📄 Descargar Plantilla de Ejemplo
-                </button>
-            </div>
         </div>
 
-        <!-- Herramientas Tab (NUEVO) -->
-        <div id="herramientas" class="tab-content">
+        <div id="herramientas-tab" class="tab-content">
             <div class="card">
-                <div class="card-title" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <span class="icon">🔧</span>
-                        Inventario de Herramientas
-                    </div>
-                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <label class="btn btn-info btn-sm" style="margin: 0; cursor: pointer;">
-                            📤 Importar Excel
-                            <input type="file" id="importHerramientas" accept=".xlsx,.xls" style="display: none;" onchange="importarHerramientas(event)">
+                <div class="card-header">
+                    <h2 class="card-title">🔧 Control de Herramientas</h2>
+                    <div class="card-actions">
+                        <button class="btn-primary" onclick="agregarHerramienta()">➕ Agregar</button>
+                        <label class="file-upload-label">
+                            📥 Importar Excel
+                            <input type="file" id="importHerramientasFile" accept=".xlsx,.xls" onchange="handleImportHerramientas(this.files[0])">
                         </label>
-                        <button class="btn btn-export btn-sm" onclick="exportarHerramientas()">
-                            📥 Exportar Excel
-                        </button>
+                        <button class="btn-warning" onclick="descargarPlantillaHerramientas()">📄 Plantilla</button>
                     </div>
                 </div>
                 <div class="table-container">
@@ -1044,1051 +942,646 @@
                                 <th>Ubicación</th>
                                 <th>Responsable</th>
                                 <th>Notas</th>
-                                <th>Acción</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
-                        <tbody id="herramientasBody"></tbody>
+                        <tbody id="herramientasTable"></tbody>
                     </table>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="card-title">
-                    <span class="icon">➕</span>
-                    Agregar Herramienta
-                </div>
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label>Nombre</label>
-                        <input type="text" id="newToolName" placeholder="Ej: Martillo">
-                    </div>
-                    <div class="form-group">
-                        <label>Cantidad</label>
-                        <input type="number" id="newToolCantidad" placeholder="1" value="1">
-                    </div>
-                    <div class="form-group">
-                        <label>Estado</label>
-                        <select id="newToolEstado">
-                            <option value="disponible">✅ Disponible</option>
-                            <option value="en-uso">⚠️ En Uso</option>
-                            <option value="mantenimiento">🔧 Mantenimiento</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Ubicación</label>
-                        <input type="text" id="newToolUbicacion" placeholder="Ej: Depósito">
-                    </div>
-                    <div class="form-group">
-                        <label>Responsable</label>
-                        <input type="text" id="newToolResponsable" placeholder="Ej: Juan">
-                    </div>
-                    <div class="form-group">
-                        <label>Notas</label>
-                        <textarea id="newToolNotas" placeholder="Observaciones..." rows="2"></textarea>
-                    </div>
-                </div>
-                <button class="btn btn-primary" onclick="addTool()">
-                    <span>➕</span>
-                    Agregar Herramienta
-                </button>
-            </div>
-
-            <div class="card" style="background: #f0f9ff; border-color: #3b82f6;">
-                <div class="card-title" style="color: #1e40af;">
-                    <span class="icon">💡</span>
-                    Ayuda para Importar
-                </div>
-                <p style="margin-bottom: 15px; color: #1e40af;">
-                    Para importar herramientas desde Excel, tu archivo debe tener estas columnas:
-                    <strong>Herramienta, Cantidad, Estado, Ubicación, Responsable, Notas</strong>
-                </p>
-                <button class="btn btn-info btn-sm" onclick="descargarPlantillaHerramientas()">
-                    📄 Descargar Plantilla de Ejemplo
-                </button>
-            </div>
         </div>
 
-        <!-- Financiero Tab -->
-        <div id="financiero" class="tab-content">
+        <div id="resumen-tab" class="tab-content">
             <div class="card">
-                <div class="card-title" style="display: flex; justify-content: space-between; align-items: center;">
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <span class="icon">💰</span>
-                        Gestión Financiera
-                    </div>
-                    <button class="btn btn-export btn-sm" onclick="exportarFinanciero()">
-                        📥 Exportar Excel
-                    </button>
+                <div class="card-header">
+                    <h2 class="card-title">📊 Resumen General</h2>
                 </div>
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label>Entrada en Pesos</label>
-                        <input type="number" id="entradaPlata" placeholder="0" onchange="recalculate()">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Total Jornales</div>
+                        <div class="stat-value" id="totalJornales">$0</div>
                     </div>
-                    <div class="form-group">
-                        <label>Dólares Disponibles</label>
-                        <input type="number" id="dolares" placeholder="0" onchange="recalculate()">
+                    <div class="stat-card">
+                        <div class="stat-label">Total Materiales</div>
+                        <div class="stat-value" id="totalMateriales">$0</div>
                     </div>
-                    <div class="form-group">
-                        <label>Cotización USD</label>
-                        <input type="number" id="cotizacion" placeholder="1475" onchange="recalculate()">
+                    <div class="stat-card">
+                        <div class="stat-label">Trabajadores</div>
+                        <div class="stat-value" id="totalTrabajadores">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Total General</div>
+                        <div class="stat-value" id="totalGeneral">$0</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal Nueva Obra -->
-    <div id="modalNuevaObra" class="modal">
+    <div id="modalObra" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>🏢 Nueva Obra</h2>
-                <span class="close" onclick="cerrarModalNuevaObra()">&times;</span>
+                <h3 class="modal-title" id="modalObraTitle">Nueva Obra</h3>
+                <button class="modal-close" onclick="cerrarModal('modalObra')">✕</button>
             </div>
-            <div class="form-group">
-                <label>Nombre de la Obra</label>
-                <input type="text" id="nuevaObraNombre" placeholder="Ej: Edificio Centro">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label class="form-label">Nombre de la Obra *</label>
+                    <input type="text" id="obraNombre" placeholder="Ej: Edificio Torres del Sol">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Cliente</label>
+                    <input type="text" id="obraCliente" placeholder="Ej: Constructora ABC">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Ubicación</label>
+                    <input type="text" id="obraUbicacion" placeholder="Ej: Av. Principal 1234">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Fecha de Inicio</label>
+                    <input type="date" id="obraFechaInicio">
+                </div>
             </div>
-            <div class="form-group" style="margin-top: 15px;">
-                <label>Dirección</label>
-                <input type="text" id="nuevaObraDireccion" placeholder="Ej: Av. Principal 123">
-            </div>
-            <div style="margin-top: 20px; display: flex; gap: 10px;">
-                <button class="btn btn-primary" onclick="crearNuevaObra()" style="flex: 1;">Crear Obra</button>
-                <button class="btn btn-secondary" onclick="cerrarModalNuevaObra()" style="flex: 1;">Cancelar</button>
+            <input type="hidden" id="obraEditId">
+            <div class="modal-footer">
+                <button class="btn-outline" onclick="cerrarModal('modalObra')">Cancelar</button>
+                <button class="btn-primary" onclick="guardarObra()">Guardar Obra</button>
             </div>
         </div>
     </div>
 
     <script>
-        // Data structure - Multi-obra
-        let obras = [
-            {
-                id: 0,
-                nombre: 'Obra Principal',
-                direccion: '',
-                workers: [
-                    { name: 'Eduardo', jornal: 40000, dias: [1,1,1,1,1], premio: 4000, premioAsist: 1000, aplicaAsist: true },
-                    { name: 'Brian', jornal: 30000, dias: [1,1,1,1,0], premio: 4000, premioAsist: 2000, aplicaAsist: false }
-                ],
-                materiales: [
-                    { fecha: '2026-02-01', proveedor: 'JORGE', descripcion: 'Gastos varios obra', monto: 2000, responsable: 'YO' }
-                ],
-                herramientas: [
-                    { nombre: 'Martillo', cantidad: 3, estado: 'disponible', ubicacion: 'Depósito', responsable: 'Juan', notas: 'Buen estado' },
-                    { nombre: 'Taladro', cantidad: 2, estado: 'en-uso', ubicacion: 'Obra', responsable: 'Carlos', notas: 'En uso planta 2' }
-                ],
-                financiero: {
-                    entradaPlata: 8000,
-                    dolares: 1100,
-                    cotizacion: 1475
-                }
+        let obras = [];
+        let obraActualId = null;
+        let semanaActualIndex = 0;
+
+        function inicializar() {
+            cargarDatos();
+            actualizarSelectorObras();
+            
+            if (obras.length > 0 && !obraActualId) {
+                obraActualId = obras[0].id;
+                semanaActualIndex = 0;
             }
-        ];
+            
+            actualizarVista();
+            
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('obraFechaInicio').value = today;
+        }
 
-        let obraActualId = 0;
+        function cargarDatos() {
+            try {
+                const datosGuardados = localStorage.getItem('obrasControlObra');
+                if (datosGuardados) {
+                    obras = JSON.parse(datosGuardados);
+                }
+            } catch (error) {
+                console.error('Error cargando datos:', error);
+                obras = [];
+            }
+        }
 
-        // Get current obra
+        function guardarDatos() {
+            try {
+                localStorage.setItem('obrasControlObra', JSON.stringify(obras));
+            } catch (error) {
+                console.error('Error guardando datos:', error);
+                alert('Error al guardar los datos');
+            }
+        }
+
         function getObraActual() {
-            return obras.find(o => o.id === obraActualId) || obras[0];
+            if (!obraActualId) return null;
+            return obras.find(o => o.id === obraActualId) || null;
         }
 
-        // Update date
-        function updateDate() {
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            document.getElementById('currentDate').textContent = new Date().toLocaleDateString('es-AR', options);
+        function getSemanaActual() {
+            const obra = getObraActual();
+            if (!obra) return null;
+            
+            if (!Array.isArray(obra.semanas)) {
+                obra.semanas = [];
+            }
+            
+            while (obra.semanas.length <= semanaActualIndex) {
+                const fechaBase = new Date();
+                fechaBase.setDate(fechaBase.getDate() + (obra.semanas.length * 7));
+                
+                obra.semanas.push({
+                    numero: obra.semanas.length + 1,
+                    fechaInicio: fechaBase.toISOString().split('T')[0],
+                    jornales: [],
+                    materiales: [],
+                    herramientas: []
+                });
+            }
+            
+            const semana = obra.semanas[semanaActualIndex];
+            
+            if (!Array.isArray(semana.jornales)) semana.jornales = [];
+            if (!Array.isArray(semana.materiales)) semana.materiales = [];
+            if (!Array.isArray(semana.herramientas)) semana.herramientas = [];
+            
+            return semana;
         }
 
-        // Tab switching
-        function switchTab(tabName) {
+        function validarObraSeleccionada() {
+            if (!obraActualId) {
+                alert('⚠️ Primero debes seleccionar o crear una obra');
+                return false;
+            }
+            return true;
+        }
+
+        function actualizarSelectorObras() {
+            const select = document.getElementById('obraSelect');
+            select.innerHTML = '<option value="">Selecciona una obra...</option>';
+            
+            obras.forEach(obra => {
+                const option = document.createElement('option');
+                option.value = obra.id;
+                option.textContent = obra.nombre;
+                select.appendChild(option);
+            });
+            
+            if (obraActualId) {
+                select.value = obraActualId;
+            }
+        }
+
+        function cambiarObra() {
+            const select = document.getElementById('obraSelect');
+            obraActualId = select.value ? parseInt(select.value) : null;
+            semanaActualIndex = 0;
+            actualizarVista();
+        }
+
+        function abrirModalNuevaObra() {
+            document.getElementById('modalObraTitle').textContent = 'Nueva Obra';
+            document.getElementById('obraNombre').value = '';
+            document.getElementById('obraCliente').value = '';
+            document.getElementById('obraUbicacion').value = '';
+            document.getElementById('obraFechaInicio').value = new Date().toISOString().split('T')[0];
+            document.getElementById('obraEditId').value = '';
+            document.getElementById('modalObra').classList.add('active');
+        }
+
+        function editarObraActual() {
+            if (!validarObraSeleccionada()) return;
+            
+            const obra = getObraActual();
+            if (!obra) return;
+            
+            document.getElementById('modalObraTitle').textContent = 'Editar Obra';
+            document.getElementById('obraNombre').value = obra.nombre || '';
+            document.getElementById('obraCliente').value = obra.cliente || '';
+            document.getElementById('obraUbicacion').value = obra.ubicacion || '';
+            document.getElementById('obraFechaInicio').value = obra.fechaInicio || '';
+            document.getElementById('obraEditId').value = obra.id;
+            document.getElementById('modalObra').classList.add('active');
+        }
+
+        function guardarObra() {
+            const nombre = document.getElementById('obraNombre').value.trim();
+            
+            if (!nombre) {
+                alert('⚠️ El nombre de la obra es obligatorio');
+                return;
+            }
+            
+            const editId = document.getElementById('obraEditId').value;
+            
+            const datosObra = {
+                nombre: nombre,
+                cliente: document.getElementById('obraCliente').value.trim(),
+                ubicacion: document.getElementById('obraUbicacion').value.trim(),
+                fechaInicio: document.getElementById('obraFechaInicio').value
+            };
+            
+            if (editId) {
+                const obra = obras.find(o => o.id === parseInt(editId));
+                if (obra) {
+                    Object.assign(obra, datosObra);
+                }
+            } else {
+                const nuevaObra = {
+                    id: Date.now(),
+                    ...datosObra,
+                    semanas: []
+                };
+                obras.push(nuevaObra);
+                obraActualId = nuevaObra.id;
+                semanaActualIndex = 0;
+            }
+            
+            guardarDatos();
+            actualizarSelectorObras();
+            actualizarVista();
+            cerrarModal('modalObra');
+        }
+
+        function eliminarObraActual() {
+            if (!validarObraSeleccionada()) return;
+            
+            const obra = getObraActual();
+            if (!obra) return;
+            
+            if (confirm(`¿Estás seguro de eliminar la obra "${obra.nombre}"?\n\nEsta acción no se puede deshacer.`)) {
+                obras = obras.filter(o => o.id !== obraActualId);
+                obraActualId = null;
+                semanaActualIndex = 0;
+                guardarDatos();
+                actualizarSelectorObras();
+                actualizarVista();
+            }
+        }
+
+        function cambiarSemana(delta) {
+            if (!validarObraSeleccionada()) return;
+            
+            const nuevoIndex = semanaActualIndex + delta;
+            if (nuevoIndex >= 0) {
+                semanaActualIndex = nuevoIndex;
+                actualizarVista();
+            }
+        }
+
+        function actualizarInfoSemana() {
+            const semana = getSemanaActual();
+            
+            if (!semana) {
+                document.getElementById('weekTitle').textContent = 'Semana -';
+                document.getElementById('weekDates').textContent = 'Selecciona una obra';
+                return;
+            }
+            
+            document.getElementById('weekTitle').textContent = `Semana ${semanaActualIndex + 1}`;
+            
+            const fechaBase = new Date();
+            fechaBase.setDate(fechaBase.getDate() + (semanaActualIndex * 7));
+            const fechaFin = new Date(fechaBase);
+            fechaFin.setDate(fechaFin.getDate() + 6);
+            
+            const formatoFecha = (fecha) => {
+                const dia = fecha.getDate();
+                const mes = fecha.toLocaleDateString('es-AR', { month: 'short' });
+                return `${dia} ${mes}`;
+            };
+            
+            document.getElementById('weekDates').textContent = 
+                `${formatoFecha(fechaBase)} - ${formatoFecha(fechaFin)} ${fechaBase.getFullYear()}`;
+        }
+
+        function changeTab(tabName) {
             document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
             
             event.target.classList.add('active');
-            document.getElementById(tabName).classList.add('active');
+            document.getElementById(`${tabName}-tab`).classList.add('active');
         }
 
-        // Obra management
-        function cambiarObra() {
-            obraActualId = parseInt(document.getElementById('obraSelect').value);
-            cargarObraActual();
-        }
-
-        function mostrarModalNuevaObra() {
-            document.getElementById('modalNuevaObra').style.display = 'block';
-        }
-
-        function cerrarModalNuevaObra() {
-            document.getElementById('modalNuevaObra').style.display = 'none';
-            document.getElementById('nuevaObraNombre').value = '';
-            document.getElementById('nuevaObraDireccion').value = '';
-        }
-
-        function crearNuevaObra() {
-            const nombre = document.getElementById('nuevaObraNombre').value.trim();
-            const direccion = document.getElementById('nuevaObraDireccion').value.trim();
-
-            if (!nombre) {
-                alert('⚠️ Por favor ingresa el nombre de la obra');
-                return;
-            }
-
-            const nuevaObra = {
-                id: Date.now(),
-                nombre: nombre,
-                direccion: direccion,
-                workers: [],
-                materiales: [],
-                herramientas: [],
-                financiero: {
-                    entradaPlata: 0,
-                    dolares: 0,
-                    cotizacion: 1475
-                }
-            };
-
-            obras.push(nuevaObra);
-            renderizarSelectorObras();
-            document.getElementById('obraSelect').value = nuevaObra.id;
-            cambiarObra();
-            cerrarModalNuevaObra();
-            alert('✅ Obra "' + nombre + '" creada correctamente');
-            saveData();
-        }
-
-        function eliminarObraActual() {
-            if (obras.length <= 1) {
-                alert('⚠️ Debes mantener al menos una obra');
-                return;
-            }
-
-            const obra = getObraActual();
-            if (confirm('¿Estás seguro de eliminar la obra "' + obra.nombre + '"?\n\nEsta acción no se puede deshacer y se perderán todos los datos.')) {
-                obras = obras.filter(o => o.id !== obraActualId);
-                obraActualId = obras[0].id;
-                renderizarSelectorObras();
-                document.getElementById('obraSelect').value = obraActualId;
-                cargarObraActual();
-                alert('🗑️ Obra eliminada correctamente');
-                saveData();
-            }
-        }
-
-        function renderizarSelectorObras() {
-            const select = document.getElementById('obraSelect');
-            select.innerHTML = obras.map(o => 
-                `<option value="${o.id}">${o.nombre}${o.direccion ? ' - ' + o.direccion : ''}</option>`
-            ).join('');
-            select.value = obraActualId;
-        }
-
-        function cargarObraActual() {
-            const obra = getObraActual();
+        function agregarJornal() {
+            if (!validarObraSeleccionada()) return;
             
-            // Load financial data
-            document.getElementById('entradaPlata').value = obra.financiero.entradaPlata;
-            document.getElementById('dolares').value = obra.financiero.dolares;
-            document.getElementById('cotizacion').value = obra.financiero.cotizacion;
+            const semana = getSemanaActual();
+            if (!semana) return;
             
-            // Set material date
-            document.getElementById('newMaterialFecha').valueAsDate = new Date();
-            
-            recalculate();
-        }
-
-        // Calculate totals
-        function calculateTotals() {
-            const obra = getObraActual();
-            let totals = {
-                jornal: 0,
-                premio: 0,
-                asistencia: 0,
-                total: 0,
-                diasTrabajados: 0
-            };
-
-            obra.workers.forEach(w => {
-                const diasTrabajados = w.dias.reduce((a, b) => a + b, 0);
-                const jornalSemana = w.jornal * diasTrabajados;
-                const premioTotal = w.premio * diasTrabajados;
-                const asistenciaTotal = w.aplicaAsist ? w.premioAsist * diasTrabajados : 0;
-                const totalPagar = jornalSemana + premioTotal + asistenciaTotal;
-
-                totals.jornal += jornalSemana;
-                totals.premio += premioTotal;
-                totals.asistencia += asistenciaTotal;
-                totals.total += totalPagar;
-                totals.diasTrabajados += diasTrabajados;
+            semana.jornales.push({
+                trabajador: '',
+                jornalDia: 0,
+                lun: false,
+                mar: false,
+                mie: false,
+                jue: false,
+                vie: false,
+                premioDia: 0,
+                asistenciaDia: 0,
+                prestamo: 0,
+                devuelve: 0
             });
-
-            return totals;
+            
+            guardarDatos();
+            renderJornales();
         }
 
-        // Render jornales table
+        function eliminarJornal(index) {
+            if (confirm('¿Estás seguro de eliminar este jornal?')) {
+                const semana = getSemanaActual();
+                if (!semana) return;
+                
+                semana.jornales.splice(index, 1);
+                guardarDatos();
+                renderJornales();
+                actualizarResumen();
+            }
+        }
+
+        function actualizarJornal(index, campo, valor) {
+            const semana = getSemanaActual();
+            if (!semana || !semana.jornales[index]) return;
+            
+            if (campo === 'trabajador' || campo === 'jornalDia' || campo === 'premioDia' || 
+                campo === 'asistenciaDia' || campo === 'prestamo' || campo === 'devuelve') {
+                semana.jornales[index][campo] = campo === 'trabajador' ? valor : parseFloat(valor) || 0;
+            } else if (['lun', 'mar', 'mie', 'jue', 'vie'].includes(campo)) {
+                semana.jornales[index][campo] = valor;
+            }
+            
+            guardarDatos();
+            renderJornales();
+            actualizarResumen();
+        }
+
         function renderJornales() {
-            const obra = getObraActual();
-            const tbody = document.getElementById('jornalesBody');
+            const tbody = document.getElementById('jornalesTable');
+            const semana = getSemanaActual();
+            
+            if (!semana || !semana.jornales || semana.jornales.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="17" class="empty-state"><div class="empty-state-icon">👷</div><div class="empty-state-text">No hay jornales registrados</div><div class="empty-state-hint">Agrega un jornal o importa desde Excel</div></td></tr>';
+                return;
+            }
+            
             tbody.innerHTML = '';
-
-            obra.workers.forEach((w, idx) => {
-                const diasTrabajados = w.dias.reduce((a, b) => a + b, 0);
-                const jornalSemana = w.jornal * diasTrabajados;
-                const premioTotal = w.premio * diasTrabajados;
-                const asistenciaTotal = w.aplicaAsist ? w.premioAsist * diasTrabajados : 0;
-                const totalPagar = jornalSemana + premioTotal + asistenciaTotal;
-
-                // Estilo para celdas de asistencia según si aplica o no
-                const asistStyle = w.aplicaAsist ? '' : 'opacity: 0.4; text-decoration: line-through;';
-
+            
+            semana.jornales.forEach((jornal, index) => {
+                const dias = [jornal.lun, jornal.mar, jornal.mie, jornal.jue, jornal.vie].filter(d => d).length;
+                const totalJornal = (jornal.jornalDia || 0) * dias;
+                const totalPremio = (jornal.premioDia || 0) * dias;
+                const totalAsistencia = (jornal.asistenciaDia || 0) * dias;
+                const aPagar = totalJornal + totalPremio + totalAsistencia + (jornal.prestamo || 0) - (jornal.devuelve || 0);
+                
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
-                    <td class="worker-name">${w.name}</td>
-                    <td><input type="number" value="${w.jornal}" onchange="updateWorker(${idx}, 'jornal', this.value)" style="width: 80px;"></td>
-                    ${w.dias.map((d, i) => `
-                        <td style="text-align: center;">
-                            <input type="checkbox" ${d ? 'checked' : ''} onchange="updateDia(${idx}, ${i}, this.checked)">
-                        </td>
-                    `).join('')}
-                    <td style="text-align: center; font-weight: 700;">
-                        ${diasTrabajados}
-                        ${diasTrabajados < 5 ? '<span style="color: var(--danger); font-size: 0.8rem;">⚠️</span>' : '<span style="color: var(--success); font-size: 0.8rem;">✅</span>'}
-                    </td>
-                    <td>$${jornalSemana.toLocaleString('es-AR')}</td>
-                    <td><input type="number" value="${w.premio}" onchange="updateWorker(${idx}, 'premio', this.value)" style="width: 80px;"></td>
-                    <td>$${premioTotal.toLocaleString('es-AR')}</td>
-                    <td style="${asistStyle}"><input type="number" value="${w.premioAsist}" onchange="updateWorker(${idx}, 'premioAsist', this.value)" style="width: 80px;"></td>
-                    <td style="${asistStyle}">
-                        ${w.aplicaAsist ? '$' + asistenciaTotal.toLocaleString('es-AR') : '$0 (Falta)'}
-                    </td>
-                    <td style="font-weight: 700; color: var(--success);">$${totalPagar.toLocaleString('es-AR')}</td>
-                    <td style="text-align: center;">
-                        <button class="btn btn-secondary btn-sm" onclick="deleteWorker(${idx})" title="Eliminar trabajador">🗑️</button>
-                    </td>
-                `;
-                tbody.appendChild(tr);
-            });
-
-            const totals = calculateTotals();
-            document.getElementById('totalJornal').textContent = '$' + totals.jornal.toLocaleString('es-AR');
-            document.getElementById('totalPremio').textContent = '$' + totals.premio.toLocaleString('es-AR');
-            document.getElementById('totalAsistencia').textContent = '$' + totals.asistencia.toLocaleString('es-AR');
-            document.getElementById('totalPagar').textContent = '$' + totals.total.toLocaleString('es-AR');
-        }
-
-        // Render materiales table
-        function renderMateriales() {
-            const obra = getObraActual();
-            const tbody = document.getElementById('materialesBody');
-            tbody.innerHTML = '';
-
-            let total = 0;
-            obra.materiales.forEach((m, idx) => {
-                total += m.monto;
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td><input type="date" value="${m.fecha}" onchange="updateMaterial(${idx}, 'fecha', this.value)" style="width: 130px;"></td>
-                    <td><input type="text" value="${m.proveedor}" onchange="updateMaterial(${idx}, 'proveedor', this.value)"></td>
-                    <td><input type="text" value="${m.descripcion}" onchange="updateMaterial(${idx}, 'descripcion', this.value)"></td>
-                    <td><input type="number" value="${m.monto}" onchange="updateMaterial(${idx}, 'monto', this.value)" style="width: 100px;"></td>
-                    <td><input type="text" value="${m.responsable}" onchange="updateMaterial(${idx}, 'responsable', this.value)" style="width: 90px;"></td>
-                    <td style="text-align: center;">
-                        <button class="btn btn-secondary btn-sm" onclick="deleteMaterial(${idx})" title="Eliminar gasto">🗑️</button>
-                    </td>
-                `;
-                tbody.appendChild(tr);
-            });
-
-            document.getElementById('totalMateriales').textContent = '$' + total.toLocaleString('es-AR');
-        }
-
-        // Render herramientas table (NUEVO)
-        function renderHerramientas() {
-            const obra = getObraActual();
-            const tbody = document.getElementById('herramientasBody');
-            tbody.innerHTML = '';
-
-            obra.herramientas.forEach((h, idx) => {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td><input type="text" value="${h.nombre}" onchange="updateTool(${idx}, 'nombre', this.value)"></td>
-                    <td><input type="number" value="${h.cantidad}" onchange="updateTool(${idx}, 'cantidad', this.value)" style="width: 70px;"></td>
+                    <td><input type="text" value="${jornal.trabajador || ''}" onchange="actualizarJornal(${index}, 'trabajador', this.value)" placeholder="Nombre"></td>
+                    <td><input type="number" value="${jornal.jornalDia || 0}" onchange="actualizarJornal(${index}, 'jornalDia', this.value)" min="0"></td>
+                    <td><input type="checkbox" ${jornal.lun ? 'checked' : ''} onchange="actualizarJornal(${index}, 'lun', this.checked)"></td>
+                    <td><input type="checkbox" ${jornal.mar ? 'checked' : ''} onchange="actualizarJornal(${index}, 'mar', this.checked)"></td>
+                    <td><input type="checkbox" ${jornal.mie ? 'checked' : ''} onchange="actualizarJornal(${index}, 'mie', this.checked)"></td>
+                    <td><input type="checkbox" ${jornal.jue ? 'checked' : ''} onchange="actualizarJornal(${index}, 'jue', this.checked)"></td>
+                    <td><input type="checkbox" ${jornal.vie ? 'checked' : ''} onchange="actualizarJornal(${index}, 'vie', this.checked)"></td>
+                    <td>${dias}</td>
+                    <td>$${formatearNumero(totalJornal)}</td>
+                    <td><input type="number" value="${jornal.premioDia || 0}" onchange="actualizarJornal(${index}, 'premioDia', this.value)" min="0"></td>
+                    <td>$${formatearNumero(totalPremio)}</td>
+                    <td><input type="number" value="${jornal.asistenciaDia || 0}" onchange="actualizarJornal(${index}, 'asistenciaDia', this.value)" min="0"></td>
+                    <td>$${formatearNumero(totalAsistencia)}</td>
+                    <td><input type="number" value="${jornal.prestamo || 0}" onchange="actualizarJornal(${index}, 'prestamo', this.value)" min="0"></td>
+                    <td><input type="number" value="${jornal.devuelve || 0}" onchange="actualizarJornal(${index}, 'devuelve', this.value)" min="0"></td>
+                    <td><strong>$${formatearNumero(aPagar)}</strong></td>
                     <td>
-                        <select onchange="updateTool(${idx}, 'estado', this.value)" style="width: 100%;">
-                            <option value="disponible" ${h.estado === 'disponible' ? 'selected' : ''}>✅ Disponible</option>
-                            <option value="en-uso" ${h.estado === 'en-uso' ? 'selected' : ''}>⚠️ En Uso</option>
-                            <option value="mantenimiento" ${h.estado === 'mantenimiento' ? 'selected' : ''}>🔧 Mantenimiento</option>
+                        <div class="action-buttons">
+                            <button class="btn-danger btn-action" onclick="eliminarJornal(${index})">🗑️</button>
+                        </div>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function agregarMaterial() {
+            if (!validarObraSeleccionada()) return;
+            
+            const semana = getSemanaActual();
+            if (!semana) return;
+            
+            semana.materiales.push({
+                fecha: new Date().toISOString().split('T')[0],
+                proveedor: '',
+                descripcion: '',
+                monto: 0,
+                responsable: ''
+            });
+            
+            guardarDatos();
+            renderMateriales();
+        }
+
+        function eliminarMaterial(index) {
+            if (confirm('¿Estás seguro de eliminar este material?')) {
+                const semana = getSemanaActual();
+                if (!semana) return;
+                
+                semana.materiales.splice(index, 1);
+                guardarDatos();
+                renderMateriales();
+                actualizarResumen();
+            }
+        }
+
+        function actualizarMaterial(index, campo, valor) {
+            const semana = getSemanaActual();
+            if (!semana || !semana.materiales[index]) return;
+            
+            if (campo === 'monto') {
+                semana.materiales[index][campo] = parseFloat(valor) || 0;
+            } else {
+                semana.materiales[index][campo] = valor;
+            }
+            
+            guardarDatos();
+            renderMateriales();
+            actualizarResumen();
+        }
+
+        function renderMateriales() {
+            const tbody = document.getElementById('materialesTable');
+            const semana = getSemanaActual();
+            
+            if (!semana || !semana.materiales || semana.materiales.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" class="empty-state"><div class="empty-state-icon">🧱</div><div class="empty-state-text">No hay materiales registrados</div><div class="empty-state-hint">Agrega un material o importa desde Excel</div></td></tr>';
+                return;
+            }
+            
+            tbody.innerHTML = '';
+            
+            semana.materiales.forEach((material, index) => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><input type="date" value="${material.fecha || ''}" onchange="actualizarMaterial(${index}, 'fecha', this.value)"></td>
+                    <td><input type="text" value="${material.proveedor || ''}" onchange="actualizarMaterial(${index}, 'proveedor', this.value)" placeholder="Proveedor"></td>
+                    <td><input type="text" value="${material.descripcion || ''}" onchange="actualizarMaterial(${index}, 'descripcion', this.value)" placeholder="Descripción"></td>
+                    <td><input type="number" value="${material.monto || 0}" onchange="actualizarMaterial(${index}, 'monto', this.value)" min="0"></td>
+                    <td><input type="text" value="${material.responsable || ''}" onchange="actualizarMaterial(${index}, 'responsable', this.value)" placeholder="Responsable"></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-danger btn-action" onclick="eliminarMaterial(${index})">🗑️</button>
+                        </div>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function agregarHerramienta() {
+            if (!validarObraSeleccionada()) return;
+            
+            const semana = getSemanaActual();
+            if (!semana) return;
+            
+            semana.herramientas.push({
+                nombre: '',
+                cantidad: 1,
+                estado: 'disponible',
+                ubicacion: '',
+                responsable: '',
+                notas: ''
+            });
+            
+            guardarDatos();
+            renderHerramientas();
+        }
+
+        function eliminarHerramienta(index) {
+            if (confirm('¿Estás seguro de eliminar esta herramienta?')) {
+                const semana = getSemanaActual();
+                if (!semana) return;
+                
+                semana.herramientas.splice(index, 1);
+                guardarDatos();
+                renderHerramientas();
+            }
+        }
+
+        function actualizarHerramienta(index, campo, valor) {
+            const semana = getSemanaActual();
+            if (!semana || !semana.herramientas[index]) return;
+            
+            if (campo === 'cantidad') {
+                semana.herramientas[index][campo] = parseInt(valor) || 1;
+            } else {
+                semana.herramientas[index][campo] = valor;
+            }
+            
+            guardarDatos();
+            renderHerramientas();
+        }
+
+        function renderHerramientas() {
+            const tbody = document.getElementById('herramientasTable');
+            const semana = getSemanaActual();
+            
+            if (!semana || !semana.herramientas || semana.herramientas.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="7" class="empty-state"><div class="empty-state-icon">🔧</div><div class="empty-state-text">No hay herramientas registradas</div><div class="empty-state-hint">Agrega una herramienta o importa desde Excel</div></td></tr>';
+                return;
+            }
+            
+            tbody.innerHTML = '';
+            
+            semana.herramientas.forEach((herramienta, index) => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><input type="text" value="${herramienta.nombre || ''}" onchange="actualizarHerramienta(${index}, 'nombre', this.value)" placeholder="Nombre"></td>
+                    <td><input type="number" value="${herramienta.cantidad || 1}" onchange="actualizarHerramienta(${index}, 'cantidad', this.value)" min="1"></td>
+                    <td>
+                        <select onchange="actualizarHerramienta(${index}, 'estado', this.value)">
+                            <option value="disponible" ${herramienta.estado === 'disponible' ? 'selected' : ''}>Disponible</option>
+                            <option value="en-uso" ${herramienta.estado === 'en-uso' ? 'selected' : ''}>En Uso</option>
+                            <option value="mantenimiento" ${herramienta.estado === 'mantenimiento' ? 'selected' : ''}>Mantenimiento</option>
                         </select>
                     </td>
-                    <td><input type="text" value="${h.ubicacion}" onchange="updateTool(${idx}, 'ubicacion', this.value)"></td>
-                    <td><input type="text" value="${h.responsable}" onchange="updateTool(${idx}, 'responsable', this.value)"></td>
-                    <td><textarea onchange="updateTool(${idx}, 'notas', this.value)" style="min-height: 40px;">${h.notas}</textarea></td>
-                    <td style="text-align: center;">
-                        <button class="btn btn-secondary btn-sm" onclick="deleteTool(${idx})" title="Eliminar herramienta">🗑️</button>
+                    <td><input type="text" value="${herramienta.ubicacion || ''}" onchange="actualizarHerramienta(${index}, 'ubicacion', this.value)" placeholder="Ubicación"></td>
+                    <td><input type="text" value="${herramienta.responsable || ''}" onchange="actualizarHerramienta(${index}, 'responsable', this.value)" placeholder="Responsable"></td>
+                    <td><input type="text" value="${herramienta.notas || ''}" onchange="actualizarHerramienta(${index}, 'notas', this.value)" placeholder="Notas"></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-danger btn-action" onclick="eliminarHerramienta(${index})">🗑️</button>
+                        </div>
                     </td>
                 `;
                 tbody.appendChild(tr);
             });
         }
 
-        // Worker functions
-        function updateWorker(idx, field, value) {
-            const obra = getObraActual();
-            obra.workers[idx][field] = parseFloat(value) || 0;
-            recalculate();
-        }
-
-        function updateDia(idx, dia, checked) {
-            const obra = getObraActual();
-            obra.workers[idx].dias[dia] = checked ? 1 : 0;
+        function actualizarResumen() {
+            const semana = getSemanaActual();
             
-            // Si falta un día (checked = false), desactivar premio de asistencia
-            const diasTrabajados = obra.workers[idx].dias.reduce((a, b) => a + b, 0);
-            if (diasTrabajados < 5) {
-                obra.workers[idx].aplicaAsist = false;
-            } else {
-                obra.workers[idx].aplicaAsist = true;
-            }
-            
-            recalculate();
-        }
-
-        function addWorker() {
-            const name = document.getElementById('newWorkerName').value.trim();
-            const jornal = parseFloat(document.getElementById('newWorkerJornal').value) || 0;
-            const premio = parseFloat(document.getElementById('newWorkerPremio').value) || 0;
-            const premioAsist = parseFloat(document.getElementById('newWorkerAsistencia').value) || 0;
-
-            if (!name) {
-                alert('⚠️ Por favor ingresa el nombre del trabajador');
-                document.getElementById('newWorkerName').focus();
+            if (!semana) {
+                document.getElementById('totalJornales').textContent = '$0';
+                document.getElementById('totalMateriales').textContent = '$0';
+                document.getElementById('totalTrabajadores').textContent = '0';
+                document.getElementById('totalGeneral').textContent = '$0';
                 return;
             }
-
-            if (jornal <= 0) {
-                alert('⚠️ Por favor ingresa un jornal diario válido');
-                document.getElementById('newWorkerJornal').focus();
-                return;
-            }
-
-            const obra = getObraActual();
-            obra.workers.push({
-                name,
-                jornal,
-                dias: [0, 0, 0, 0, 0],
-                premio,
-                premioAsist,
-                aplicaAsist: true
-            });
-
-            document.getElementById('newWorkerName').value = '';
-            document.getElementById('newWorkerJornal').value = '';
-            document.getElementById('newWorkerPremio').value = '';
-            document.getElementById('newWorkerAsistencia').value = '';
-
-            alert('✅ Trabajador "' + name + '" agregado correctamente');
-            recalculate();
-        }
-
-        function deleteWorker(idx) {
-            const obra = getObraActual();
-            if (idx < 0 || idx >= obra.workers.length) return;
             
-            const workerName = obra.workers[idx].name;
-            if (confirm('¿Estás seguro de eliminar a "' + workerName + '"?\n\nEsta acción no se puede deshacer.')) {
-                obra.workers.splice(idx, 1);
-                alert('🗑️ Trabajador "' + workerName + '" eliminado');
-                recalculate();
-            }
-        }
-
-        // Material functions
-        function updateMaterial(idx, field, value) {
-            const obra = getObraActual();
-            if (field === 'monto') {
-                obra.materiales[idx][field] = parseFloat(value) || 0;
-            } else {
-                obra.materiales[idx][field] = value;
-            }
-            recalculate();
-        }
-
-        function addMaterial() {
-            const fecha = document.getElementById('newMaterialFecha').value;
-            const proveedor = document.getElementById('newMaterialProveedor').value.trim();
-            const descripcion = document.getElementById('newMaterialDesc').value.trim();
-            const monto = parseFloat(document.getElementById('newMaterialMonto').value) || 0;
-            const responsable = document.getElementById('newMaterialResp').value.trim();
-
-            if (!fecha) {
-                alert('⚠️ Por favor selecciona una fecha');
-                return;
-            }
-
-            if (!proveedor) {
-                alert('⚠️ Por favor ingresa el proveedor');
-                return;
-            }
-
-            if (!descripcion) {
-                alert('⚠️ Por favor ingresa una descripción');
-                return;
-            }
-
-            if (monto <= 0) {
-                alert('⚠️ Por favor ingresa un monto válido');
-                return;
-            }
-
-            const obra = getObraActual();
-            obra.materiales.push({ fecha, proveedor, descripcion, monto, responsable });
-
-            document.getElementById('newMaterialFecha').valueAsDate = new Date();
-            document.getElementById('newMaterialProveedor').value = '';
-            document.getElementById('newMaterialDesc').value = '';
-            document.getElementById('newMaterialMonto').value = '';
-            document.getElementById('newMaterialResp').value = '';
-
-            alert('✅ Gasto de $' + monto.toLocaleString('es-AR') + ' agregado correctamente');
-            recalculate();
-        }
-
-        function deleteMaterial(idx) {
-            const obra = getObraActual();
-            if (idx < 0 || idx >= obra.materiales.length) return;
-            
-            const material = obra.materiales[idx];
-            const descripcion = material.descripcion || 'este gasto';
-            if (confirm('¿Estás seguro de eliminar "' + descripcion + '" por $' + material.monto.toLocaleString('es-AR') + '?')) {
-                obra.materiales.splice(idx, 1);
-                alert('🗑️ Gasto eliminado correctamente');
-                recalculate();
-            }
-        }
-
-        // Tool functions (NUEVO)
-        function updateTool(idx, field, value) {
-            const obra = getObraActual();
-            if (field === 'cantidad') {
-                obra.herramientas[idx][field] = parseInt(value) || 0;
-            } else {
-                obra.herramientas[idx][field] = value;
-            }
-            recalculate();
-        }
-
-        function addTool() {
-            const nombre = document.getElementById('newToolName').value.trim();
-            const cantidad = parseInt(document.getElementById('newToolCantidad').value) || 1;
-            const estado = document.getElementById('newToolEstado').value;
-            const ubicacion = document.getElementById('newToolUbicacion').value.trim();
-            const responsable = document.getElementById('newToolResponsable').value.trim();
-            const notas = document.getElementById('newToolNotas').value.trim();
-
-            if (!nombre) {
-                alert('⚠️ Por favor ingresa el nombre de la herramienta');
-                return;
-            }
-
-            const obra = getObraActual();
-            obra.herramientas.push({ nombre, cantidad, estado, ubicacion, responsable, notas });
-
-            document.getElementById('newToolName').value = '';
-            document.getElementById('newToolCantidad').value = '1';
-            document.getElementById('newToolEstado').value = 'disponible';
-            document.getElementById('newToolUbicacion').value = '';
-            document.getElementById('newToolResponsable').value = '';
-            document.getElementById('newToolNotas').value = '';
-
-            alert('✅ Herramienta "' + nombre + '" agregada correctamente');
-            recalculate();
-        }
-
-        function deleteTool(idx) {
-            const obra = getObraActual();
-            if (idx < 0 || idx >= obra.herramientas.length) return;
-            
-            const tool = obra.herramientas[idx];
-            if (confirm('¿Estás seguro de eliminar "' + tool.nombre + '"?')) {
-                obra.herramientas.splice(idx, 1);
-                alert('🗑️ Herramienta eliminada correctamente');
-                recalculate();
-            }
-        }
-
-        // Update dashboard
-        function updateDashboard() {
-            const obra = getObraActual();
-            const totals = calculateTotals();
-            const totalMateriales = obra.materiales.reduce((sum, m) => sum + m.monto, 0);
-            
-            obra.financiero.entradaPlata = parseFloat(document.getElementById('entradaPlata').value) || 0;
-            obra.financiero.dolares = parseFloat(document.getElementById('dolares').value) || 0;
-            obra.financiero.cotizacion = parseFloat(document.getElementById('cotizacion').value) || 0;
-            
-            const dolaresEnPesos = obra.financiero.dolares * obra.financiero.cotizacion;
-            const entradaTotal = obra.financiero.entradaPlata + dolaresEnPesos;
-            const saldo = entradaTotal - totals.total - totalMateriales;
-
-            let entradaHTML = '$' + entradaTotal.toLocaleString('es-AR');
-            if (obra.financiero.dolares > 0 && obra.financiero.cotizacion > 0) {
-                entradaHTML += '<div class="metric-breakdown">ARS: $' + obra.financiero.entradaPlata.toLocaleString('es-AR') + 
-                               ' + USD: $' + obra.financiero.dolares.toLocaleString('es-AR') + 
-                               ' × ' + obra.financiero.cotizacion.toLocaleString('es-AR') + 
-                               ' = $' + dolaresEnPesos.toLocaleString('es-AR') + '</div>';
-            }
-            
-            document.getElementById('dashEntrada').innerHTML = entradaHTML;
-            document.getElementById('dashManoObra').textContent = '$' + totals.total.toLocaleString('es-AR');
-            document.getElementById('dashMateriales').textContent = '$' + totalMateriales.toLocaleString('es-AR');
-            
-            const saldoEl = document.getElementById('dashSaldo');
-            saldoEl.textContent = '$' + saldo.toLocaleString('es-AR');
-            saldoEl.className = 'metric-value ' + (saldo >= 0 ? 'positive' : 'negative');
-
-            // Worker stats
-            if (obra.workers.length > 0) {
-                const totalDiasPosibles = obra.workers.length * 5;
-                const porcentaje = Math.round((totals.diasTrabajados / totalDiasPosibles) * 100);
-                
-                document.getElementById('assistanceProgress').style.width = porcentaje + '%';
-                document.getElementById('assistanceLabel').textContent = porcentaje + '% de asistencia';
-
-                const statsHTML = obra.workers.map(w => {
-                    const dias = w.dias.reduce((a, b) => a + b, 0);
-                    return `
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #f8fafc; border-radius: 8px; margin-bottom: 8px; border: 1px solid var(--border);">
-                            <span style="font-weight: 700; color: var(--text-primary);">${w.name}</span>
-                            <span class="worker-badge ${dias >= 5 ? 'full' : 'partial'}">${dias} días</span>
-                        </div>
-                    `;
-                }).join('');
-
-                document.getElementById('workerStats').innerHTML = statsHTML;
-            } else {
-                document.getElementById('assistanceProgress').style.width = '0%';
-                document.getElementById('assistanceLabel').textContent = '0% de asistencia';
-                document.getElementById('workerStats').innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 20px;">No hay trabajadores registrados</p>';
-            }
-
-            // Tools stats (NUEVO)
-            if (obra.herramientas.length > 0) {
-                const toolsHTML = obra.herramientas.map(h => {
-                    let estadoIcon = '✅';
-                    if (h.estado === 'en-uso') estadoIcon = '⚠️';
-                    if (h.estado === 'mantenimiento') estadoIcon = '🔧';
-                    
-                    return `
-                        <span class="tool-badge ${h.estado}">
-                            ${estadoIcon} ${h.nombre} (${h.cantidad})
-                        </span>
-                    `;
-                }).join('');
-
-                document.getElementById('toolsStats').innerHTML = toolsHTML;
-            } else {
-                document.getElementById('toolsStats').innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 20px;">No hay herramientas registradas</p>';
-            }
-        }
-
-        // Recalculate everything
-        function recalculate() {
-            renderJornales();
-            renderMateriales();
-            renderHerramientas();
-            updateDashboard();
-            saveData();
-        }
-
-        // Save/Load data
-        function saveData() {
-            localStorage.setItem('obrasData', JSON.stringify(obras));
-            localStorage.setItem('obraActualId', obraActualId);
-        }
-
-        function loadData() {
-            const savedObras = localStorage.getItem('obrasData');
-            if (savedObras) {
-                obras = JSON.parse(savedObras);
-            }
-            
-            const savedObraId = localStorage.getItem('obraActualId');
-            if (savedObraId) {
-                obraActualId = parseInt(savedObraId);
-            }
-        }
-
-        // Initialize
-        loadData();
-        renderizarSelectorObras();
-        updateDate();
-        setInterval(updateDate, 60000);
-        document.getElementById('newMaterialFecha').valueAsDate = new Date();
-        cargarObraActual();
-
-        // Auto-save every 5 seconds
-        setInterval(saveData, 5000);
-
-        // Close modal on outside click
-        window.onclick = function(event) {
-            const modal = document.getElementById('modalNuevaObra');
-            if (event.target == modal) {
-                cerrarModalNuevaObra();
-            }
-        }
-
-        // Allow Enter key
-        ['newWorkerName', 'newWorkerJornal', 'newWorkerPremio', 'newWorkerAsistencia'].forEach(id => {
-            const input = document.getElementById(id);
-            if (input) {
-                input.addEventListener('keypress', function(e) {
-                    if (e.key === 'Enter') {
-                        e.preventDefault();
-                        addWorker();
-                    }
+            let totalJornales = 0;
+            if (Array.isArray(semana.jornales)) {
+                semana.jornales.forEach(jornal => {
+                    const dias = [jornal.lun, jornal.mar, jornal.mie, jornal.jue, jornal.vie].filter(d => d).length;
+                    const totalJornal = (jornal.jornalDia || 0) * dias;
+                    const totalPremio = (jornal.premioDia || 0) * dias;
+                    const totalAsistencia = (jornal.asistenciaDia || 0) * dias;
+                    totalJornales += totalJornal + totalPremio + totalAsistencia + (jornal.prestamo || 0) - (jornal.devuelve || 0);
                 });
             }
-        });
-
-        ['newMaterialFecha', 'newMaterialProveedor', 'newMaterialDesc', 'newMaterialMonto', 'newMaterialResp'].forEach(id => {
-            const input = document.getElementById(id);
-            if (input) {
-                input.addEventListener('keypress', function(e) {
-                    if (e.key === 'Enter') {
-                        e.preventDefault();
-                        addMaterial();
-                    }
+            
+            let totalMateriales = 0;
+            if (Array.isArray(semana.materiales)) {
+                semana.materiales.forEach(material => {
+                    totalMateriales += material.monto || 0;
                 });
             }
-        });
-
-        // ==================== FUNCIONES DE EXPORTACIÓN A EXCEL ====================
-
-        // Función auxiliar para formatear números
-        function formatearNumero(num) {
-            return '$' + num.toLocaleString('es-AR');
-        }
-
-        // Función auxiliar para obtener fecha actual formateada
-        function getFechaActual() {
-            const ahora = new Date();
-            return ahora.toLocaleDateString('es-AR').replace(/\//g, '-');
-        }
-
-        // Exportar Dashboard
-        function exportarDashboard() {
-            const obra = getObraActual();
-            const totals = calculateTotals();
-            const totalMateriales = obra.materiales.reduce((sum, m) => sum + m.monto, 0);
-            const dolaresEnPesos = obra.financiero.dolares * obra.financiero.cotizacion;
-            const entradaTotal = obra.financiero.entradaPlata + dolaresEnPesos;
-            const saldo = entradaTotal - totals.total - totalMateriales;
-
-            // Crear datos para el Dashboard
-            const dashboardData = [
-                ['DASHBOARD - ' + obra.nombre.toUpperCase()],
-                ['Fecha: ' + new Date().toLocaleDateString('es-AR')],
-                [],
-                ['RESUMEN FINANCIERO'],
-                ['Concepto', 'Monto'],
-                ['Entrada en Pesos', formatearNumero(obra.financiero.entradaPlata)],
-                ['Dólares', obra.financiero.dolares + ' USD'],
-                ['Cotización USD', formatearNumero(obra.financiero.cotizacion)],
-                ['Dólares en Pesos', formatearNumero(dolaresEnPesos)],
-                ['ENTRADA TOTAL', formatearNumero(entradaTotal)],
-                [],
-                ['EGRESOS'],
-                ['Mano de Obra', formatearNumero(totals.total)],
-                ['Materiales', formatearNumero(totalMateriales)],
-                ['TOTAL EGRESOS', formatearNumero(totals.total + totalMateriales)],
-                [],
-                ['SALDO DISPONIBLE', formatearNumero(saldo)],
-                [],
-                ['ESTADO DE TRABAJADORES'],
-                ['Trabajador', 'Días Trabajados', 'Estado']
-            ];
-
-            // Agregar trabajadores
-            obra.workers.forEach(w => {
-                const dias = w.dias.reduce((a, b) => a + b, 0);
-                dashboardData.push([w.name, dias, dias >= 5 ? '✅ Completo' : '⚠️ Incompleto']);
-            });
-
-            // Agregar herramientas
-            dashboardData.push([]);
-            dashboardData.push(['INVENTARIO DE HERRAMIENTAS']);
-            dashboardData.push(['Herramienta', 'Cantidad', 'Estado']);
             
-            obra.herramientas.forEach(h => {
-                let estadoTexto = h.estado === 'disponible' ? '✅ Disponible' : 
-                                 h.estado === 'en-uso' ? '⚠️ En Uso' : '🔧 Mantenimiento';
-                dashboardData.push([h.nombre, h.cantidad, estadoTexto]);
-            });
-
-            // Crear workbook y worksheet
-            const wb = XLSX.utils.book_new();
-            const ws = XLSX.utils.aoa_to_sheet(dashboardData);
-
-            // Ajustar ancho de columnas
-            ws['!cols'] = [
-                { wch: 30 },
-                { wch: 20 },
-                { wch: 15 }
-            ];
-
-            XLSX.utils.book_append_sheet(wb, ws, 'Dashboard');
-            XLSX.writeFile(wb, `Dashboard_${obra.nombre}_${getFechaActual()}.xlsx`);
+            document.getElementById('totalJornales').textContent = '$' + formatearNumero(totalJornales);
+            document.getElementById('totalMateriales').textContent = '$' + formatearNumero(totalMateriales);
+            document.getElementById('totalTrabajadores').textContent = semana.jornales ? semana.jornales.length : 0;
+            document.getElementById('totalGeneral').textContent = '$' + formatearNumero(totalJornales + totalMateriales);
         }
 
-        // Exportar Jornales
-        function exportarJornales() {
+        function actualizarInfoObra() {
             const obra = getObraActual();
-            const totals = calculateTotals();
-
-            // Encabezados
-            const jornalesData = [
-                ['CONTROL DE JORNALES - ' + obra.nombre.toUpperCase()],
-                ['Fecha: ' + new Date().toLocaleDateString('es-AR')],
-                [],
-                ['Trabajador', 'Jornal/Día', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Días', 'Total Jornal', 'Premio/Día', 'Total Premio', 'Asist/Día', 'Total Asist', 'A PAGAR']
-            ];
-
-            // Datos de cada trabajador
-            obra.workers.forEach(w => {
-                const diasTrabajados = w.dias.reduce((a, b) => a + b, 0);
-                const jornalSemana = w.jornal * diasTrabajados;
-                const premioTotal = w.premio * diasTrabajados;
-                const asistenciaTotal = w.aplicaAsist ? w.premioAsist * diasTrabajados : 0;
-                const totalPagar = jornalSemana + premioTotal + asistenciaTotal;
-
-                jornalesData.push([
-                    w.name,
-                    w.jornal,
-                    w.dias[0] ? '✓' : '-',
-                    w.dias[1] ? '✓' : '-',
-                    w.dias[2] ? '✓' : '-',
-                    w.dias[3] ? '✓' : '-',
-                    w.dias[4] ? '✓' : '-',
-                    diasTrabajados,
-                    jornalSemana,
-                    w.premio,
-                    premioTotal,
-                    w.aplicaAsist ? w.premioAsist : 0,
-                    asistenciaTotal,
-                    totalPagar
-                ]);
-            });
-
-            // Totales
-            jornalesData.push([]);
-            jornalesData.push([
-                'TOTAL SEMANAL', '', '', '', '', '', '', '',
-                totals.jornal, '', totals.premio, '', totals.asistencia, totals.total
-            ]);
-
-            const wb = XLSX.utils.book_new();
-            const ws = XLSX.utils.aoa_to_sheet(jornalesData);
-
-            // Ajustar ancho de columnas
-            ws['!cols'] = [
-                { wch: 20 }, { wch: 12 }, { wch: 5 }, { wch: 5 }, { wch: 5 }, 
-                { wch: 5 }, { wch: 5 }, { wch: 8 }, { wch: 15 }, { wch: 12 },
-                { wch: 15 }, { wch: 12 }, { wch: 15 }, { wch: 15 }
-            ];
-
-            XLSX.utils.book_append_sheet(wb, ws, 'Jornales');
-            XLSX.writeFile(wb, `Jornales_${obra.nombre}_${getFechaActual()}.xlsx`);
-        }
-
-        // Exportar Materiales
-        function exportarMateriales() {
-            const obra = getObraActual();
-            const totalMateriales = obra.materiales.reduce((sum, m) => sum + m.monto, 0);
-
-            const materialesData = [
-                ['CONTROL DE MATERIALES Y GASTOS - ' + obra.nombre.toUpperCase()],
-                ['Fecha: ' + new Date().toLocaleDateString('es-AR')],
-                [],
-                ['Fecha', 'Proveedor', 'Descripción', 'Monto', 'Responsable']
-            ];
-
-            // Datos de materiales
-            obra.materiales.forEach(m => {
-                materialesData.push([
-                    m.fecha,
-                    m.proveedor,
-                    m.descripcion,
-                    m.monto,
-                    m.responsable
-                ]);
-            });
-
-            // Total
-            materialesData.push([]);
-            materialesData.push(['', '', 'TOTAL MATERIALES', totalMateriales, '']);
-
-            const wb = XLSX.utils.book_new();
-            const ws = XLSX.utils.aoa_to_sheet(materialesData);
-
-            ws['!cols'] = [
-                { wch: 12 },
-                { wch: 25 },
-                { wch: 40 },
-                { wch: 15 },
-                { wch: 20 }
-            ];
-
-            XLSX.utils.book_append_sheet(wb, ws, 'Materiales');
-            XLSX.writeFile(wb, `Materiales_${obra.nombre}_${getFechaActual()}.xlsx`);
-        }
-
-        // Exportar Herramientas
-        function exportarHerramientas() {
-            const obra = getObraActual();
-
-            const herramientasData = [
-                ['INVENTARIO DE HERRAMIENTAS - ' + obra.nombre.toUpperCase()],
-                ['Fecha: ' + new Date().toLocaleDateString('es-AR')],
-                [],
-                ['Herramienta', 'Cantidad', 'Estado', 'Ubicación', 'Responsable', 'Notas']
-            ];
-
-            // Datos de herramientas
-            obra.herramientas.forEach(h => {
-                let estadoTexto = h.estado === 'disponible' ? 'Disponible' : 
-                                 h.estado === 'en-uso' ? 'En Uso' : 'Mantenimiento';
-                herramientasData.push([
-                    h.nombre,
-                    h.cantidad,
-                    estadoTexto,
-                    h.ubicacion,
-                    h.responsable,
-                    h.notas
-                ]);
-            });
-
-            // Resumen por estado
-            herramientasData.push([]);
-            herramientasData.push(['RESUMEN POR ESTADO']);
-            const disponibles = obra.herramientas.filter(h => h.estado === 'disponible').length;
-            const enUso = obra.herramientas.filter(h => h.estado === 'en-uso').length;
-            const mantenimiento = obra.herramientas.filter(h => h.estado === 'mantenimiento').length;
+            const container = document.getElementById('obraInfo');
             
-            herramientasData.push(['Disponibles', disponibles]);
-            herramientasData.push(['En Uso', enUso]);
-            herramientasData.push(['En Mantenimiento', mantenimiento]);
-            herramientasData.push(['TOTAL', obra.herramientas.length]);
-
-            const wb = XLSX.utils.book_new();
-            const ws = XLSX.utils.aoa_to_sheet(herramientasData);
-
-            ws['!cols'] = [
-                { wch: 25 },
-                { wch: 10 },
-                { wch: 15 },
-                { wch: 20 },
-                { wch: 20 },
-                { wch: 40 }
-            ];
-
-            XLSX.utils.book_append_sheet(wb, ws, 'Herramientas');
-            XLSX.writeFile(wb, `Herramientas_${obra.nombre}_${getFechaActual()}.xlsx`);
-        }
-
-        // Exportar Financiero
-        function exportarFinanciero() {
-            const obra = getObraActual();
-            const totals = calculateTotals();
-            const totalMateriales = obra.materiales.reduce((sum, m) => sum + m.monto, 0);
-            const dolaresEnPesos = obra.financiero.dolares * obra.financiero.cotizacion;
-            const entradaTotal = obra.financiero.entradaPlata + dolaresEnPesos;
-            const saldo = entradaTotal - totals.total - totalMateriales;
-
-            const financieroData = [
-                ['GESTIÓN FINANCIERA - ' + obra.nombre.toUpperCase()],
-                ['Fecha: ' + new Date().toLocaleDateString('es-AR')],
-                [],
-                ['INGRESOS'],
-                ['Concepto', 'Monto'],
-                ['Entrada en Pesos (ARS)', obra.financiero.entradaPlata],
-                ['Dólares Disponibles (USD)', obra.financiero.dolares],
-                ['Cotización del Dólar', obra.financiero.cotizacion],
-                ['Dólares convertidos a Pesos', dolaresEnPesos],
-                ['TOTAL INGRESOS', entradaTotal],
-                [],
-                ['EGRESOS'],
-                ['Concepto', 'Monto'],
-                ['Mano de Obra', totals.total],
-                ['  - Jornales', totals.jornal],
-                ['  - Premios', totals.premio],
-                ['  - Asistencia', totals.asistencia],
-                ['Materiales y Gastos', totalMateriales],
-                ['TOTAL EGRESOS', totals.total + totalMateriales],
-                [],
-                ['RESULTADO'],
-                ['SALDO DISPONIBLE', saldo],
-                [],
-                ['DETALLES DE MANO DE OBRA'],
-                ['Trabajador', 'Días', 'A Pagar']
-            ];
-
-            // Agregar detalle por trabajador
-            obra.workers.forEach(w => {
-                const diasTrabajados = w.dias.reduce((a, b) => a + b, 0);
-                const jornalSemana = w.jornal * diasTrabajados;
-                const premioTotal = w.premio * diasTrabajados;
-                const asistenciaTotal = w.aplicaAsist ? w.premioAsist * diasTrabajados : 0;
-                const totalPagar = jornalSemana + premioTotal + asistenciaTotal;
-                
-                financieroData.push([w.name, diasTrabajados, totalPagar]);
-            });
-
-            // Top 5 gastos
-            financieroData.push([]);
-            financieroData.push(['TOP 5 GASTOS EN MATERIALES']);
-            financieroData.push(['Descripción', 'Proveedor', 'Monto']);
+            if (!obra) {
+                container.innerHTML = '<div class="empty-state-hint" style="grid-column: 1 / -1; text-align: center;">Selecciona o crea una obra para comenzar</div>';
+                return;
+            }
             
-            const top5Gastos = [...obra.materiales]
-                .sort((a, b) => b.monto - a.monto)
-                .slice(0, 5);
-            
-            top5Gastos.forEach(m => {
-                financieroData.push([m.descripcion, m.proveedor, m.monto]);
-            });
-
-            const wb = XLSX.utils.book_new();
-            const ws = XLSX.utils.aoa_to_sheet(financieroData);
-
-            ws['!cols'] = [
-                { wch: 30 },
-                { wch: 20 },
-                { wch: 20 }
-            ];
-
-            XLSX.utils.book_append_sheet(wb, ws, 'Financiero');
-            XLSX.writeFile(wb, `Financiero_${obra.nombre}_${getFechaActual()}.xlsx`);
+            container.innerHTML = `
+                <div class="info-item">
+                    <div class="info-label">Cliente</div>
+                    <div class="info-value">${obra.cliente || '-'}</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Ubicación</div>
+                    <div class="info-value">${obra.ubicacion || '-'}</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Fecha de Inicio</div>
+                    <div class="info-value">${obra.fechaInicio ? formatearFecha(obra.fechaInicio) : '-'}</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Semanas Registradas</div>
+                    <div class="info-value">${obra.semanas ? obra.semanas.length : 0}</div>
+                </div>
+            `;
         }
 
-        // ==================== FIN FUNCIONES DE EXPORTACIÓN ====================
-
-        // ==================== FUNCIONES DE IMPORTACIÓN DESDE EXCEL ====================
-
-        // Función auxiliar para limpiar valores
-        function limpiarValor(valor) {
-            if (valor === null || valor === undefined || valor === '') return '';
-            return String(valor).trim();
-        }
-
-        // Función auxiliar para convertir checkmark a booleano
-        function esCheckmark(valor) {
-            const v = limpiarValor(valor).toLowerCase();
-            return v === '✓' || v === 'x' || v === '1' || v === 'si' || v === 'sí' || v === 'true';
-        }
-
-        // Importar Jornales
-        function importarJornales(event) {
-            const file = event.target.files[0];
+        function handleImportJornales(file) {
+            if (!validarObraSeleccionada()) return;
             if (!file) return;
+            
+            const options = confirm('¿Deseas REEMPLAZAR todos los jornales actuales?\n\nOK = Reemplazar\nCancelar = Agregar a los existentes');
+            importarJornales(file, options ? 'replace' : 'add');
+        }
 
+        function handleImportMateriales(file) {
+            if (!validarObraSeleccionada()) return;
+            if (!file) return;
+            
+            const options = confirm('¿Deseas REEMPLAZAR todos los materiales actuales?\n\nOK = Reemplazar\nCancelar = Agregar a los existentes');
+            importarMateriales(file, options ? 'replace' : 'add');
+        }
+
+        function handleImportHerramientas(file) {
+            if (!validarObraSeleccionada()) return;
+            if (!file) return;
+            
+            const options = confirm('¿Deseas REEMPLAZAR todas las herramientas actuales?\n\nOK = Reemplazar\nCancelar = Agregar a las existentes');
+            importarHerramientas(file, options ? 'replace' : 'add');
+        }
+
+        function importarJornales(file, mode) {
             const reader = new FileReader();
             reader.onload = function(e) {
                 try {
@@ -2097,7 +1590,6 @@
                     const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
                     const jsonData = XLSX.utils.sheet_to_json(firstSheet, { header: 1 });
 
-                    // Buscar la fila de encabezados (que contenga "Trabajador")
                     let headerRow = -1;
                     for (let i = 0; i < jsonData.length; i++) {
                         if (jsonData[i][0] && String(jsonData[i][0]).toLowerCase().includes('trabajador')) {
@@ -2111,41 +1603,42 @@
                         return;
                     }
 
-                    const obra = getObraActual();
+                    const semana = getSemanaActual();
+                    if (!semana) {
+                        alert('⚠️ Error al obtener la semana actual');
+                        return;
+                    }
+                    
+                    if (mode === 'replace') {
+                        semana.jornales = [];
+                    }
+
                     let importados = 0;
                     let errores = 0;
 
-                    // Procesar cada fila después del encabezado
                     for (let i = headerRow + 1; i < jsonData.length; i++) {
                         const row = jsonData[i];
                         
-                        // Saltar filas vacías o de totales
-                        if (!row[0] || String(row[0]).toUpperCase().includes('TOTAL')) continue;
+                        if (!row[0] || String(row[0]).toUpperCase().includes('RESUMEN') || 
+                            String(row[0]).toUpperCase().includes('TOTAL')) continue;
 
                         try {
-                            const trabajador = {
-                                name: limpiarValor(row[0]),
-                                jornal: parseFloat(row[1]) || 0,
-                                dias: [
-                                    esCheckmark(row[2]) ? 1 : 0,  // Lunes
-                                    esCheckmark(row[3]) ? 1 : 0,  // Martes
-                                    esCheckmark(row[4]) ? 1 : 0,  // Miércoles
-                                    esCheckmark(row[5]) ? 1 : 0,  // Jueves
-                                    esCheckmark(row[6]) ? 1 : 0   // Viernes
-                                ],
-                                premio: parseFloat(row[9]) || 0,
-                                premioAsist: parseFloat(row[11]) || 0,
-                                aplicaAsist: true
+                            const jornal = {
+                                trabajador: limpiarValor(row[0]),
+                                jornalDia: parseFloat(row[1]) || 0,
+                                lun: esValorMarcado(row[2]),
+                                mar: esValorMarcado(row[3]),
+                                mie: esValorMarcado(row[4]),
+                                jue: esValorMarcado(row[5]),
+                                vie: esValorMarcado(row[6]),
+                                premioDia: parseFloat(row[9]) || 0,
+                                asistenciaDia: parseFloat(row[11]) || 0,
+                                prestamo: parseFloat(row[13]) || 0,
+                                devuelve: parseFloat(row[14]) || 0
                             };
 
-                            // Verificar asistencia completa
-                            const diasTrabajados = trabajador.dias.reduce((a, b) => a + b, 0);
-                            if (diasTrabajados < 5) {
-                                trabajador.aplicaAsist = false;
-                            }
-
-                            if (trabajador.name && trabajador.jornal > 0) {
-                                obra.workers.push(trabajador);
+                            if (jornal.trabajador && jornal.jornalDia > 0) {
+                                semana.jornales.push(jornal);
                                 importados++;
                             }
                         } catch (err) {
@@ -2155,29 +1648,22 @@
                     }
 
                     if (importados > 0) {
-                        recalculate();
-                        alert(`✅ Se importaron ${importados} trabajador(es) correctamente${errores > 0 ? `\n⚠️ ${errores} fila(s) con errores fueron omitidas` : ''}`);
+                        guardarDatos();
+                        renderJornales();
+                        actualizarResumen();
+                        alert(`✅ Se ${mode === 'replace' ? 'reemplazaron' : 'importaron'} ${importados} jornal(es) correctamente${errores > 0 ? `\n⚠️ ${errores} fila(s) con errores fueron omitidas` : ''}`);
                     } else {
-                        alert('⚠️ No se pudo importar ningún trabajador. Verifica el formato del archivo.');
+                        alert('⚠️ No se pudo importar ningún jornal. Verifica el formato del archivo.');
                     }
-
-                    // Limpiar el input
-                    event.target.value = '';
-
                 } catch (error) {
                     console.error('Error importando archivo:', error);
                     alert('❌ Error al importar el archivo. Asegúrate de que sea un archivo Excel válido.');
-                    event.target.value = '';
                 }
             };
             reader.readAsArrayBuffer(file);
         }
 
-        // Importar Materiales
-        function importarMateriales(event) {
-            const file = event.target.files[0];
-            if (!file) return;
-
+        function importarMateriales(file, mode) {
             const reader = new FileReader();
             reader.onload = function(e) {
                 try {
@@ -2186,7 +1672,6 @@
                     const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
                     const jsonData = XLSX.utils.sheet_to_json(firstSheet, { header: 1 });
 
-                    // Buscar la fila de encabezados
                     let headerRow = -1;
                     for (let i = 0; i < jsonData.length; i++) {
                         if (jsonData[i][0] && String(jsonData[i][0]).toLowerCase().includes('fecha')) {
@@ -2200,34 +1685,45 @@
                         return;
                     }
 
-                    const obra = getObraActual();
+                    const semana = getSemanaActual();
+                    if (!semana) {
+                        alert('⚠️ Error al obtener la semana actual');
+                        return;
+                    }
+                    
+                    if (mode === 'replace') {
+                        semana.materiales = [];
+                    }
+
                     let importados = 0;
                     let errores = 0;
 
                     for (let i = headerRow + 1; i < jsonData.length; i++) {
                         const row = jsonData[i];
                         
-                        if (!row[0] || String(row[0]).toUpperCase().includes('TOTAL')) continue;
+                        if (!row[0] || String(row[0]).toUpperCase().includes('RESUMEN') || 
+                            String(row[0]).toUpperCase().includes('TOTAL')) continue;
 
                         try {
-                            // Convertir fecha de Excel a formato YYYY-MM-DD
-                            let fecha = limpiarValor(row[0]);
-                            if (typeof row[0] === 'number') {
-                                // Es un número de serie de Excel
-                                const excelDate = XLSX.SSF.parse_date_code(row[0]);
-                                fecha = `${excelDate.y}-${String(excelDate.m).padStart(2, '0')}-${String(excelDate.d).padStart(2, '0')}`;
+                            let fechaStr = limpiarValor(row[0]);
+                            if (fechaStr && !fechaStr.includes('-')) {
+                                const excelDate = parseFloat(fechaStr);
+                                if (!isNaN(excelDate)) {
+                                    const date = new Date((excelDate - 25569) * 86400 * 1000);
+                                    fechaStr = date.toISOString().split('T')[0];
+                                }
                             }
 
                             const material = {
-                                fecha: fecha,
+                                fecha: fechaStr || new Date().toISOString().split('T')[0],
                                 proveedor: limpiarValor(row[1]),
                                 descripcion: limpiarValor(row[2]),
                                 monto: parseFloat(row[3]) || 0,
                                 responsable: limpiarValor(row[4])
                             };
 
-                            if (material.fecha && material.proveedor && material.monto > 0) {
-                                obra.materiales.push(material);
+                            if (material.proveedor && material.descripcion && material.monto > 0) {
+                                semana.materiales.push(material);
                                 importados++;
                             }
                         } catch (err) {
@@ -2237,28 +1733,22 @@
                     }
 
                     if (importados > 0) {
-                        recalculate();
-                        alert(`✅ Se importaron ${importados} gasto(s) correctamente${errores > 0 ? `\n⚠️ ${errores} fila(s) con errores fueron omitidas` : ''}`);
+                        guardarDatos();
+                        renderMateriales();
+                        actualizarResumen();
+                        alert(`✅ Se ${mode === 'replace' ? 'reemplazaron' : 'importaron'} ${importados} material(es) correctamente${errores > 0 ? `\n⚠️ ${errores} fila(s) con errores fueron omitidas` : ''}`);
                     } else {
-                        alert('⚠️ No se pudo importar ningún gasto. Verifica el formato del archivo.');
+                        alert('⚠️ No se pudo importar ningún material. Verifica el formato del archivo.');
                     }
-
-                    event.target.value = '';
-
                 } catch (error) {
                     console.error('Error importando archivo:', error);
                     alert('❌ Error al importar el archivo. Asegúrate de que sea un archivo Excel válido.');
-                    event.target.value = '';
                 }
             };
             reader.readAsArrayBuffer(file);
         }
 
-        // Importar Herramientas
-        function importarHerramientas(event) {
-            const file = event.target.files[0];
-            if (!file) return;
-
+        function importarHerramientas(file, mode) {
             const reader = new FileReader();
             reader.onload = function(e) {
                 try {
@@ -2267,7 +1757,6 @@
                     const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
                     const jsonData = XLSX.utils.sheet_to_json(firstSheet, { header: 1 });
 
-                    // Buscar la fila de encabezados
                     let headerRow = -1;
                     for (let i = 0; i < jsonData.length; i++) {
                         if (jsonData[i][0] && String(jsonData[i][0]).toLowerCase().includes('herramienta')) {
@@ -2281,7 +1770,16 @@
                         return;
                     }
 
-                    const obra = getObraActual();
+                    const semana = getSemanaActual();
+                    if (!semana) {
+                        alert('⚠️ Error al obtener la semana actual');
+                        return;
+                    }
+                    
+                    if (mode === 'replace') {
+                        semana.herramientas = [];
+                    }
+
                     let importados = 0;
                     let errores = 0;
 
@@ -2292,7 +1790,6 @@
                             String(row[0]).toUpperCase().includes('TOTAL')) continue;
 
                         try {
-                            // Mapear estado
                             let estadoTexto = limpiarValor(row[2]).toLowerCase();
                             let estado = 'disponible';
                             if (estadoTexto.includes('uso')) estado = 'en-uso';
@@ -2308,7 +1805,7 @@
                             };
 
                             if (herramienta.nombre) {
-                                obra.herramientas.push(herramienta);
+                                semana.herramientas.push(herramienta);
                                 importados++;
                             }
                         } catch (err) {
@@ -2318,32 +1815,29 @@
                     }
 
                     if (importados > 0) {
-                        recalculate();
-                        alert(`✅ Se importaron ${importados} herramienta(s) correctamente${errores > 0 ? `\n⚠️ ${errores} fila(s) con errores fueron omitidas` : ''}`);
+                        guardarDatos();
+                        renderHerramientas();
+                        alert(`✅ Se ${mode === 'replace' ? 'reemplazaron' : 'importaron'} ${importados} herramienta(s) correctamente${errores > 0 ? `\n⚠️ ${errores} fila(s) con errores fueron omitidas` : ''}`);
                     } else {
                         alert('⚠️ No se pudo importar ninguna herramienta. Verifica el formato del archivo.');
                     }
-
-                    event.target.value = '';
-
                 } catch (error) {
                     console.error('Error importando archivo:', error);
                     alert('❌ Error al importar el archivo. Asegúrate de que sea un archivo Excel válido.');
-                    event.target.value = '';
                 }
             };
             reader.readAsArrayBuffer(file);
         }
 
-        // Función para descargar plantilla vacía
         function descargarPlantillaJornales() {
             const plantilla = [
                 ['PLANTILLA DE IMPORTACIÓN - JORNALES'],
                 ['Completa los datos y luego importa este archivo'],
                 [],
-                ['Trabajador', 'Jornal/Día', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Días', 'Total Jornal', 'Premio/Día', 'Total Premio', 'Asist/Día', 'Total Asist', 'A PAGAR'],
-                ['Juan Pérez', '40000', '✓', '✓', '✓', '✓', '✓', '', '', '4000', '', '1000', '', ''],
-                ['María López', '35000', '✓', '✓', '✓', '✓', '-', '', '', '3500', '', '1500', '', '']
+                ['Trabajador', 'Jornal/Día', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Días', 'Total Jornal', 
+                 'Premio/Día', 'Total Premio', 'Asist/Día', 'Total Asist', 'Préstamo', 'Devuelve', 'A PAGAR'],
+                ['Juan Pérez', '40000', '✓', '✓', '✓', '✓', '✓', '', '', '4000', '', '1000', '', '50000', '0', ''],
+                ['María López', '35000', '✓', '✓', '✓', '✓', '-', '', '', '3500', '', '1500', '', '0', '25000', '']
             ];
 
             const wb = XLSX.utils.book_new();
@@ -2351,7 +1845,7 @@
             ws['!cols'] = [
                 { wch: 20 }, { wch: 12 }, { wch: 5 }, { wch: 5 }, { wch: 5 }, 
                 { wch: 5 }, { wch: 5 }, { wch: 8 }, { wch: 15 }, { wch: 12 },
-                { wch: 15 }, { wch: 12 }, { wch: 15 }, { wch: 15 }
+                { wch: 15 }, { wch: 12 }, { wch: 15 }, { wch: 12 }, { wch: 12 }, { wch: 15 }
             ];
 
             XLSX.utils.book_append_sheet(wb, ws, 'Plantilla');
@@ -2398,7 +1892,45 @@
             XLSX.writeFile(wb, 'Plantilla_Herramientas.xlsx');
         }
 
-        // ==================== FIN FUNCIONES DE IMPORTACIÓN ====================
+        function actualizarVista() {
+            actualizarInfoObra();
+            actualizarInfoSemana();
+            renderJornales();
+            renderMateriales();
+            renderHerramientas();
+            actualizarResumen();
+        }
+
+        function formatearNumero(num) {
+            return num.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+        }
+
+        function formatearFecha(fecha) {
+            const date = new Date(fecha + 'T00:00:00');
+            return date.toLocaleDateString('es-AR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+        }
+
+        function limpiarValor(valor) {
+            return valor ? String(valor).trim() : '';
+        }
+
+        function esValorMarcado(valor) {
+            if (!valor) return false;
+            const str = String(valor).toLowerCase().trim();
+            return str === '✓' || str === 'x' || str === 'si' || str === 'sí' || str === '1' || str === 'true';
+        }
+
+        function cerrarModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('modal')) {
+                e.target.classList.remove('active');
+            }
+        });
+
+        window.onload = inicializar;
     </script>
 </body>
 </html>
