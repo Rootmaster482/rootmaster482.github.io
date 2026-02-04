@@ -1309,7 +1309,7 @@
                 const totalJornal = (jornal.jornalDia || 0) * dias;
                 const totalPremio = (jornal.premioDia || 0) * dias;
                 const totalAsistencia = (jornal.asistenciaDia || 0) * dias;
-                const aPagar = totalJornal + totalPremio + totalAsistencia + (jornal.prestamo || 0) - (jornal.devuelve || 0);
+                const aPagar = totalJornal + totalPremio + totalAsistencia - (jornal.prestamo || 0) + (jornal.devuelve || 0);
                 
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
@@ -1511,7 +1511,7 @@
                     const totalJornal = (jornal.jornalDia || 0) * dias;
                     const totalPremio = (jornal.premioDia || 0) * dias;
                     const totalAsistencia = (jornal.asistenciaDia || 0) * dias;
-                    totalJornales += totalJornal + totalPremio + totalAsistencia + (jornal.prestamo || 0) - (jornal.devuelve || 0);
+                    totalJornales += totalJornal + totalPremio + totalAsistencia - (jornal.prestamo || 0) + (jornal.devuelve || 0);
                 });
             }
             
